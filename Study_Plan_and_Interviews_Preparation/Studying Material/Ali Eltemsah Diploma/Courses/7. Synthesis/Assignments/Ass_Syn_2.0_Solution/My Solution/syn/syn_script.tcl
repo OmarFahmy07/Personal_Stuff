@@ -1,0 +1,250 @@
+define_design_lib work -path ./work
+
+set_svf UART.svf
+
+puts "###########################################"
+puts "#      #setting Design Libraries           #"
+puts "###########################################"
+
+################## Design Compiler Library Files ######################
+
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/std_cells
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP
+
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+
+puts "###########################################"
+puts "#             Reading RTL Files           #"
+puts "###########################################"
+
+#echo "###############################################"
+#echo "############# Reading RTL Files  ##############"
+#echo "###############################################"
+
+#TX
+read_file -format verilog MUX_8x1.v
+read_file -format verilog Parity_Calc.v
+read_file -format verilog serializer.v
+read_file -format verilog UART_Tx_FSM.v
+read_file -format verilog UART_Tx.v
+#RX
+read_file -format verilog data_sampling.v
+read_file -format verilog deserializer.v
+read_file -format verilog edge_bit_counter.v
+read_file -format verilog parity_check.v
+read_file -format verilog stop_check.v
+read_file -format verilog start_check.v
+read_file -format verilog UART_Rx.v
+read_file -format verilog UART_Rx_FSM.v
+#UART TOP
+read_file -format verilog UART_TOP/UART.v
+
+puts "###############################################"
+puts "######## Liniking All The Design Parts ########"
+puts "###############################################"
+
+#################### Liniking All The Design Parts #########################
+#echo "###############################################"
+#echo "# Linking The Top Module with its submodules  #"
+#echo "###############################################"
+
+link 
+
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+puts "######## checking design consistency ##########"
+puts "###############################################"
+
+check_design
+
+############# Make unique copies of replicated modules by ##################
+############# giving each replicated module a unique name  #############
+
+#uniquify
+
+#################### Define Design Constraints #########################
+puts "###############################################"
+puts "############ Design Constraints #### ##########"
+puts "###############################################"
+
+
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+
+####################################################################################
+           #########################################################
+                  #### Section 1 : Clock Definition ####
+           #########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set RX_CLK_NAME 	RX_CLK
+set TX_CLK_NAME		TX_CLK
+set CLK_SETUP_SKEW	0.25
+set CLK_HOLD_SKEW	0.05
+set RX_CLK_PERIOD 	100
+set TX_CLK_PERIOD	800
+set CLK_RISE		0.1
+set CLK_FALL		0.1
+set CLK_LAT		0
+set DIV_RATIO		8
+
+create_clock -name $RX_CLK_NAME -period $RX_CLK_PERIOD [get_ports RX_CLK]
+create_clock -name $TX_CLK_NAME -period $TX_CLK_PERIOD [get_ports TX_CLK]
+
+#create_generated_clock -master_clock $RX_CLK_NAME -source [get_ports RX_CLK] -name $TX_CLK_NAME -divide_by $DIV_RATIO [get_ports TX_CLK]
+
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $RX_CLK_NAME]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $RX_CLK_NAME]
+
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $TX_CLK_NAME]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks $TX_CLK_NAME]
+
+set_clock_transition -rise $CLK_RISE  [get_clocks $RX_CLK_NAME]
+set_clock_transition -fall $CLK_FALL  [get_clocks $RX_CLK_NAME]
+
+set_clock_transition -rise $CLK_RISE  [get_clocks $TX_CLK_NAME]
+set_clock_transition -fall $CLK_FALL  [get_clocks $TX_CLK_NAME]
+
+set_clock_latency $CLK_LAT [get_clocks $RX_CLK_NAME]
+set_clock_latency $CLK_LAT [get_clocks $TX_CLK_NAME]
+
+set_dont_touch_network TX_CLK
+set_dont_touch_network RX_CLK
+set_dont_touch_network RST
+
+####################################################################################
+           #########################################################
+                  #### Section 2 : Clocks Relationships ####
+           #########################################################
+####################################################################################
+set_multicycle_path -setup $DIV_RATIO -from $TX_CLK_NAME -to $RX_CLK_NAME
+set_multicycle_path -hold [expr $DIV_RATIO - 1] -from $TX_CLK_NAME -to $RX_CLK_NAME
+
+####################################################################################
+           #########################################################
+             #### Section 3 : #set input/output delay on ports ####
+           #########################################################
+####################################################################################
+set RX_CLK_INPUT_DELAY   [expr 0.2 * $RX_CLK_PERIOD]
+set RX_CLK_OUTPUT_DELAY  [expr 0.2 * $RX_CLK_PERIOD]
+
+#Constrain Input Paths
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports PAR_TYP]
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports PAR_EN]
+set_input_delay $RX_CLK_INPUT_DELAY -clock $TX_CLK_NAME [get_ports P_DATA_TX]
+set_input_delay $RX_CLK_INPUT_DELAY -clock $TX_CLK_NAME [get_ports DATA_VALID_TX]
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports RX_IN]
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports PRESCALE_RX]
+
+#Constrain Output Paths
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $TX_CLK_NAME [get_ports TX_OUT]
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $TX_CLK_NAME [get_ports BUSY_TX]
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports P_DATA_RX]
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports PAR_ERR_RX]
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports STP_ERR_RX]
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports DATA_VALID_RX]
+
+####################################################################################
+           #########################################################
+                  #### Section 4 : Driving cells ####
+           #########################################################
+####################################################################################
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports PAR_TYP]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports PAR_EN]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports P_DATA_TX]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports DATA_VALID_TX]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports RX_IN]
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports PRESCALE_RX]
+
+####################################################################################
+           #########################################################
+                  #### Section 5 : Output load ####
+           #########################################################
+####################################################################################
+set_load 50 [get_ports TX_OUT]
+set_load 50 [get_ports BUSY_TX]
+set_load 50 [get_ports P_DATA_RX]
+set_load 50 [get_ports PAR_ERR_RX]
+set_load 50 [get_ports STP_ERR_RX]
+set_load 50 [get_ports DATA_VALID_RX]
+
+####################################################################################
+           #########################################################
+                 #### Section 6 : Operating Condition ####
+           #########################################################
+####################################################################################
+
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" \
+-max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+
+####################################################################################
+           #########################################################
+                  #### Section 7 : wireload Model ####
+           #########################################################
+####################################################################################
+set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+puts "###############################################"
+puts "########## Mapping & Optimization #############"
+puts "###############################################"
+
+###################### Mapping and optimization ########################
+
+compile
+
+#############################################################################
+# Write out Design after initial compile
+#############################################################################
+
+write_file -format verilog -hierarchy -output UART.v
+write_file -format ddc 	   -hierarchy -output UART.ddc
+write_sdf UART.sdf
+
+################# reporting #######################
+
+report_area -hierarchy > area.rpt
+report_power -hierarchy > power.rpt
+report_timing -max_paths 100 -delay_type min > hold.rpt
+report_timing -max_paths 100 -delay_type max > setup.rpt
+report_clock -attributes > clocks.rpt
+report_port > ports.rpt
+report_constraint -all_violators > constraints.rpt
+
+################# starting graphical user interface #######################
+
+gui_start

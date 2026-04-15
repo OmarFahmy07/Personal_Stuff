@@ -1,0 +1,52 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Ali Eltemsah - Digital IC Design\Courses\6. CDC and RDC\Assignments\Ass_1.2
+vhello
+Z1 I8h44i@?dTb:h_=Vl`M9Ig3
+Z2 VO<VJT1`0GRec1nU6Ra[Cz2
+Z3 dD:\Ali Eltemsah - Digital IC Design\Courses\6. CDC and RDC\Assignments\Ass_1.2
+Z4 w1658705518
+Z5 8./hello.v
+Z6 F./hello.v
+L0 1
+Z7 OV;L;6.6d;45
+r1
+31
+o-O0
+Z8 !s100 BlFGdG6CH?XMNOe2TU0h;2
+!s85 0
+!s101 -O0
+vRST_SYNC
+Z9 !s100 PM5aG<ieSPzVDL@5[[B;m2
+Z10 IKb2K?fZOCQn:lb<l]7JPn1
+Z11 V<9:nQhnYBJPf^599TPkX=1
+R3
+Z12 w1658705625
+Z13 8./RST_SYNC.v
+Z14 F./RST_SYNC.v
+L0 1
+R7
+r1
+31
+o-O0
+Z15 n@r@s@t_@s@y@n@c
+!s85 0
+!s101 -O0
+vRST_SYNC_tb
+!s100 >oBWdo8aO^DGfbl_TR@Vd0
+I69<=`NjncFd00`d?MI3z:3
+VkD[S_]EA^aTCeR=7hOO>J1
+R3
+w1658705875
+8./RST_SYNC_tb.v
+F./RST_SYNC_tb.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+n@r@s@t_@s@y@n@c_tb

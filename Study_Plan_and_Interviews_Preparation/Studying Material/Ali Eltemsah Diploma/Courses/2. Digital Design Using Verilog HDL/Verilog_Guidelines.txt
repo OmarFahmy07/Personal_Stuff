@@ -1,0 +1,29 @@
+1) El sequential always blocks (i.e. flip flops) 7ot dayman fel sensitivity list clock w reset bs. Be ma3na tany, ew3a te3mel flip flop yekon triggered by
+signal gheer el clock, y3ny matda5alsh 3al clock pin beta3to signal gheer el clock, matda5alsh enable masalan aw load aw keda, hatet3ab b3d keda fel 
+synthesis fi enak t7ot constraints.
+
+2) Dayman efsel el sequential logic 3an el combinational logic, y3ny dayman ay flip flop e3melo sequential always block kol el t2olo fiha:
+always@(posedge clk or negedge rst)
+  begin
+    if(!rst)
+      out <= 'd0;
+    else
+      out <= out_comb;
+  end
+w out_comb da te3melo combinational always block ta7t t3ml fih el enta 3ayzo.
+
+3) Takmelatan 3la point 2), momken te3mel el sequential always block da ye include kol el flip flops, y3ny lw fih gheer out flip flop tany esmo count masalan,
+fa 3ady t7t out <= out_comb de 2ool count <= count_comb, fa momken te3mel sequential always block wa7ed ye include kol el signals 3ady. El mohem b2a te3melo
+howa enak te3mel le kol signal combinational always block leha lwa7daha, y3ny out_comb fi block, w count_comb fi block tany, and so on.
+
+
+
+Some checks you must do for any Verilog code you write:
+
+1) Make sure that you are using non-blocking assignments inside all sequential always blocks, blocking assignments inside all combinational always blocks 
+and assign statements.
+
+2) Make sure that you are putting an initial value for all combinational always blocks including if or case statements. For if statements, make sure you are
+using else at the end. For case statements, make sure you are using default at the end.
+
+3) Make sure that all blocks' outputs are registered to avoid combinational loops (you may not need to register control signals like enable and load).

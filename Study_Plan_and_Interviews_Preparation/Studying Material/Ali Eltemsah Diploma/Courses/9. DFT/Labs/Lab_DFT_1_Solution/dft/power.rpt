@@ -1,0 +1,59 @@
+Loading db file '/home/IC/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : ALU_TOP
+Version: K-2015.06
+Date   : Tue Jul 12 22:56:46 2022
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Labs/Lab_DFT_1/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+ALU_TOP                tsmc13_wl30       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+ALU_TOP                                   0.983 5.59e-02 2.29e+07    1.062 100.0
+  U0_CMP_UNIT (CMP_UNIT)               3.15e-03 7.35e-04 3.42e+05 4.23e-03   0.4
+    r57 (CMP_UNIT_DW01_cmp6_0)         2.84e-03 4.28e-04 2.75e+05 3.54e-03   0.3
+  U0_SHIFT_UNIT (SHIFT_UNIT)           2.18e-03 1.79e-03 4.63e+05 4.44e-03   0.4
+  U0_LOGIC_UNIT (LOGIC_UNIT)           3.59e-03 2.08e-03 6.52e+05 6.32e-03   0.6
+  U0_ARITHMETIC_UNIT (ARITHMETIC_UNIT) 8.93e-02 4.37e-02 1.85e+07    0.151  14.3
+    mult_59 (ARITHMETIC_UNIT_DW02_mult_0)
+                                       5.99e-02 2.37e-02 8.15e+06 9.17e-02   8.6
+    add_51 (ARITHMETIC_UNIT_DW01_add_0)
+                                       1.48e-03 1.06e-03 4.73e+05 3.01e-03   0.3
+    sub_55 (ARITHMETIC_UNIT_DW01_sub_0)
+                                       1.86e-03 1.14e-03 5.22e+05 3.52e-03   0.3
+    div_63 (ARITHMETIC_UNIT_DW_div_uns_0)
+                                       2.29e-02 1.44e-02 8.41e+06 4.57e-02   4.3
+  U0 (Decoder)                         4.15e-04 4.22e-05 3.53e+04 4.93e-04   0.0
+  U0_rst_mux (mux2X1_0)                2.85e-05 1.41e-05 1.26e+04 5.51e-05   0.0
+  U0_clk_mux (mux2X1_1)                1.37e-02 3.21e-04 1.99e+04 1.40e-02   1.3
+1

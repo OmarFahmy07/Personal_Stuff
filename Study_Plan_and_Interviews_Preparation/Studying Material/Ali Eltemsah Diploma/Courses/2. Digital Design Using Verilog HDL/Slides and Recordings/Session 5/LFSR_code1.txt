@@ -1,0 +1,36 @@
+module trying #(parameter N = 8)(
+    input wire clock,
+    input wire reset,
+    output reg [N-1:0] LFSR
+);
+
+reg [N-1:0] LFSR_comb;
+integer i;
+wire feedback;
+
+always@(posedge clock or negedge reset)
+begin
+    if(!reset)
+    begin
+        LFSR <= 'd0;
+    end
+    else
+    begin
+        LFSR <= LFSR_comb; 
+    end
+end
+
+always@(*)
+begin
+    for(i = N; i >= 3; i = i - 2)
+    begin
+        LFSR_comb[i] = feedback ^ LFSR[i-1];
+        LFSR_comb[i-1] = LFSR[i-2];
+    end
+    LFSR_comb[1] = feedback ^ LFSR[0]; 
+    LFSR_comb[0] = feedback; 
+end
+
+assign feedback = LFSR[N-1] ^ ~|LFSR[N-2 : 0];
+
+endmodule

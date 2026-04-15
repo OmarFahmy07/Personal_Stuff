@@ -1,0 +1,60 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : UART
+Version: K-2015.06
+Date   : Fri Aug 12 21:07:31 2022
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+UART                   tsmc13_wl30       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+UART                                      0.325 1.21e-02 3.67e+06    0.341 100.0
+  U1_UART_Rx (UART_Rx_test_1)             0.284 1.01e-02 2.63e+06    0.296  87.0
+    U6_Stop (stop_check_test_1)        2.17e-05 1.78e-04 3.15e+04 2.31e-04   0.1
+    U5_Start (start_check_test_1)      1.69e-05 1.80e-04 2.77e+04 2.24e-04   0.1
+    U4_Parity (parity_check_test_1)    1.25e-04 2.47e-04 1.30e+05 5.03e-04   0.1
+    U3_Counter (edge_bit_counter_test_1)
+                                       4.23e-03 2.63e-03 5.51e+05 7.41e-03   2.2
+    U2_Deserializer (deserializer_test_1)
+                                       1.11e-03 1.78e-03 2.37e+05 3.12e-03   0.9
+    U1_Sampler (data_sampling_test_1)  2.11e-03 9.44e-04 3.57e+05 3.41e-03   1.0
+    U0_FSM (UART_Rx_FSM_test_1)        2.95e-03 1.55e-03 6.97e+05 5.20e-03   1.5
+  U0_UART_Tx (UART_Tx_test_1)          1.50e-02 1.44e-03 7.99e+05 1.72e-02   5.1
+    U3 (MUX_8x1_test_1)                1.14e-04 1.45e-04 1.31e+05 3.90e-04   0.1
+    U2 (Parity_Calc_test_1)            4.28e-04 2.60e-04 1.07e+05 7.95e-04   0.2
+    U1 (serializer_test_1)             9.62e-04 6.46e-04 3.56e+05 1.96e-03   0.6
+    U0 (UART_Tx_FSM_test_1)            1.35e-02 3.90e-04 2.05e+05 1.41e-02   4.1
+  U0_rst_mux (mux_2X1_1)               1.33e-03 3.92e-05 1.99e+04 1.39e-03   0.4
+  U0_Rx_clk_mux (mux_2X1_2)            5.53e-03 2.40e-04 1.99e+04 5.79e-03   1.7
+  U0_Tx_clk_mux (mux_2X1_0)            7.28e-04 4.58e-05 1.99e+04 7.94e-04   0.2
+1

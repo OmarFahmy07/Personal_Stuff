@@ -1,0 +1,14 @@
+# vsim work.bit_synchronizer_tb 
+# Loading work.bit_synchronizer_tb
+# Loading work.bit_synchronizer
+run -all
+# Test case passed
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 3
+#           Attempting to use alternate WLF file "./wlft6tv7dn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6tv7dn
+# ** Note: $finish    : ./bit_synchronizer_tb.v(26)
+#    Time: 20 ns  Iteration: 0  Instance: /bit_synchronizer_tb
+# 1
+# Break in Module bit_synchronizer_tb at ./bit_synchronizer_tb.v line 26

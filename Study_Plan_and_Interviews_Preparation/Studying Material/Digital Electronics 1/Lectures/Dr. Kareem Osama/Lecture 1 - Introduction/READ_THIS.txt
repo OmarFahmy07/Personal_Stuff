@@ -1,0 +1,51 @@
+Leeh makansh kefaya bel nesbalna el logic-level, what additional information can be extracted on transistor-level?
+1) Delay.
+2) Logic levels (noise margins).
+3) Power.
+
+Ezay ben7aded el NMOS on wala off?
+Gate = VDD --> on
+Gate = GND --> off
+
+Ezay ben7aded el PMOS on wala off?
+Gate = VDD --> off
+Gate = GND --> on
+
+Ezay ben7aded el NMOS wel PMOS fel saturation wala fel triode assuming they are on?
+Just nbos 3al drain wel source, lw wa7ed 3leeh VDD w wa7ed 3leeh ground yeb2a saturation, lw zy b3d yeb2a triode. Tab fi 
+7alet el sat mesh far2a meen el 3leeh VDD w meen el 3leeh ground? la2, el mohem yeb2a fih far2 mabenhom w 5alas. Leeh? la2en
+el MOSFET symmetric, fa mesh far2 el voltage difference da fi anhy etegah, el mohem en el channel yeb2a 3leeha voltage 
+difference kebeer, voltage difference kebeer 3al channel yeb2a 3la tool saturation la2en voltage difference kebeer 3al channel
+ma3naha en 7asal pinch off. 
+
+Example in photo 1: given that all transistors are ON, determine whether each transistor is in saturation or triode.
+Solution in photo 2.
+
+Scaling Performance (check slide 51):
+Hena e7na 3ayzeen nshoof eh? 3ayzeen neshoof ta2seer el scaling down bta3 el transistors on each of the following:
+1) Power.
+2) Delay.
+3) Area.
+El scaling by7sl fi eh bzbt? fel dimensions bta3t el transistors, el heya L, W, tox. Fa hena han assume en el scaling factor
+beta3 el dimensions is S (i.e. S > 1).
+Full scaling: hena ben assume en el voltages beyet3emelha scaling be nafs el factor beta3 el dimensions el howa S.
+Hayetla3lena en as the transistor is scaled down:
+1) Power --> decrease.
+2) Delay --> decrease.
+3) Area ---> decrease.
+Bs hal da manteqy en el voltages bet get scaled down be nafs el factor? y3ny lw kona shaghalen be technology 90 nm w supply 
+be 1V, hal lw ro7na le technology 45 nm el supply hayenzel le 0.5V? akeed la2, el supply mabyenzelsh fag2a keda. Fa el full
+scaling da mesh accurate awy.
+Constant Voltage Scaling: 2alak 5alas hane3teber enena ben scale down el dimensions bs laken el voltages constant. Hnwsl en:
+1) Power --> increase.
+2) Delay --> decrease.
+3) Area ---> decrease.
+General Scaling: tab3an e7na 3arfeen en mosta7eel en el supply voltage tefdal constant, we know that it is scaled down as
+well in order to avoid having very large electric field that might either cause velocity saturation & mobility degradation, 
+or destroy the chip aslan. Thus, voltages are also scaled down bs be scale factor U ahda shwaya men el scale factor S bta3
+el dimensions, y3ny U > 1 and S > 1 laken S > U. W da keda el scaling el practical el by7sl f3ln. Thus we get:
+1) Power --> increase.
+2) Delay --> decrease.
+3) Area ---> decrease.
+Kalam manteqy? aywa, ma3 el scaling down el leakage beyzeed fa akeed el power beyzeed, w akeed tab3an el area wel delay 
+bey2elo.

@@ -1,0 +1,83 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Ali Eltemsah - Digital IC Design/Courses/4. Power Aware Design/Assignment/My Solution
+vClkDiv
+Z1 !s110 1660087150
+!i10b 1
+!s100 OX4R[>]oHzUdoEg8M79nf0
+IISSiMkSc>Ek2DCW8]Mj_62
+R0
+w1660087147
+Z2 8ClkDiv.v
+Z3 FClkDiv.v
+!i122 2
+L0 1 65
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z6 !s108 1660087150.000000
+Z7 !s107 ClkDiv_tb.v|ClkDiv.v|
+Z8 !s90 ClkDiv.v|ClkDiv_tb.v|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+n@clk@div
+vClkDiv_tb
+R1
+!i10b 1
+!s100 GMWU:PF_VGiiPc;H^UGD=2
+IS2bDneH5XKg04P2^ZSDoP0
+R0
+w1660087127
+8ClkDiv_tb.v
+FClkDiv_tb.v
+!i122 2
+L0 3 36
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+n@clk@div_tb
+XClkDiv_v_unit
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1660087130
+VKb[aW8OCXgn2Iz3S05Yd^2
+r1
+!s85 0
+!i10b 1
+!s100 H55R8NJ=;hC`JE8jLkaNn1
+IKb[aW8OCXgn2Iz3S05Yd^2
+!i103 1
+S1
+R0
+w1660086780
+R2
+R3
+!i122 1
+L0 65 0
+R5
+31
+!s108 1660087130.000000
+R7
+R8
+!i113 0
+R9
+R10
+n@clk@div_v_unit

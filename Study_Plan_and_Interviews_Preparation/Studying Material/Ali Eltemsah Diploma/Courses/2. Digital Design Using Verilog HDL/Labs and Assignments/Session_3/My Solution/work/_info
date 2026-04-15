@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Simulators\Modelsim
+vALU_16bit
+!i10b 1
+!s100 WZ0=5`7E>1^_l=InP;O=>2
+IFOccC?6WZk`zc9T7I@:NY2
+Z1 VAF2o5oJ?9NfPB?ln<gHTW0
+Z2 dD:\Ali Eltemsah - Digital IC Design\Courses\Digital Design Using Verilog HDL\Labs and Assignments\Session_3\My Solution
+w1646516127
+Z3 8D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit.v
+Z4 FD:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1646516131.939000
+!s107 D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit.v|
+Z6 !s90 -reportprogress|300|-work|work|D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit.v|
+!s101 -O0
+Z7 o-work work -O0
+Z8 n@a@l@u_16bit
+vALU_16bit_tb
+Z9 !s100 cQzbYll@5L[7ZRNHd_moJ1
+Z10 I0HZ@z6gn6k9X0@KK8RYZ_0
+Z11 VSR;K64>4UAdWk2@hSc55L2
+R2
+Z12 w1646061617
+Z13 8D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit_tb.v
+Z14 FD:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit_tb.v
+L0 3
+R5
+r1
+31
+Z15 !s90 -reportprogress|300|-work|work|D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit_tb.v|
+R7
+Z16 n@a@l@u_16bit_tb
+Z17 !s108 1646254813.739000
+Z18 !s107 D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Labs and Assignments/Session_3/My Solution/ALU_16bit_tb.v|
+!i10b 1
+!s85 0
+!s101 -O0

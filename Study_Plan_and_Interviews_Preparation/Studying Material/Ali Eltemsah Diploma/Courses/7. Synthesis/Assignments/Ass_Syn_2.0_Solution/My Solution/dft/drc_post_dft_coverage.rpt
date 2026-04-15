@@ -1,0 +1,123 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 46 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *  46 cells are valid scan cells
+         U0_UART_Tx/U0/current_state_reg[0]
+         U0_UART_Tx/U0/current_state_reg[1]
+         U0_UART_Tx/U0/busy_reg
+         U0_UART_Tx/U0/current_state_reg[2]
+         U0_UART_Tx/U1/done_reg
+         U0_UART_Tx/U1/counter_reg[1]
+         U0_UART_Tx/U1/counter_reg[0]
+         U0_UART_Tx/U1/counter_reg[2]
+         U0_UART_Tx/U1/shift_reg_reg[7]
+         U0_UART_Tx/U1/shift_reg_reg[5]
+         U0_UART_Tx/U1/shift_reg_reg[4]
+         U0_UART_Tx/U1/shift_reg_reg[3]
+         U0_UART_Tx/U1/shift_reg_reg[2]
+         U0_UART_Tx/U1/shift_reg_reg[1]
+         U0_UART_Tx/U1/shift_reg_reg[6]
+         U0_UART_Tx/U1/shift_reg_reg[0]
+         U0_UART_Tx/U2/parity_result_reg
+         U0_UART_Tx/U3/out_reg
+         U1_UART_Rx/U0_FSM/current_state_reg[2]
+         U1_UART_Rx/U0_FSM/data_valid_reg
+         U1_UART_Rx/U0_FSM/current_state_reg[1]
+         U1_UART_Rx/U0_FSM/current_state_reg[0]
+         U1_UART_Rx/U1_Sampler/sample3_reg
+         U1_UART_Rx/U1_Sampler/sample2_reg
+         U1_UART_Rx/U1_Sampler/sample1_reg
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[6]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[4]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[2]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[7]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[3]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[1]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[5]
+         U1_UART_Rx/U2_Deserializer/shift_reg_reg[0]
+         U1_UART_Rx/U3_Counter/bit_counter_reg[1]
+         U1_UART_Rx/U3_Counter/bit_counter_reg[0]
+         U1_UART_Rx/U3_Counter/edge_counter_reg[0]
+         U1_UART_Rx/U3_Counter/edge_counter_reg[1]
+         U1_UART_Rx/U3_Counter/edge_counter_reg[2]
+         U1_UART_Rx/U3_Counter/edge_counter_reg[3]
+         U1_UART_Rx/U3_Counter/edge_counter_reg[4]
+         U1_UART_Rx/U3_Counter/edge_counter_reg[5]
+         U1_UART_Rx/U3_Counter/bit_counter_reg[2]
+         U1_UART_Rx/U3_Counter/bit_counter_reg[3]
+         U1_UART_Rx/U4_Parity/parity_error_reg
+         U1_UART_Rx/U5_Start/glitch_reg
+         U1_UART_Rx/U6_Stop/stop_error_reg
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 2892 faults were added to fault list.
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=2203, abort_limit=10...
+ 0            1641    562         0/0/0    79.94%      0.00
+ 0             296    266         0/0/0    90.21%      0.00
+ 0             111    155         0/0/0    94.06%      0.01
+ 0              78     75         2/0/0    96.84%      0.01
+ 0              50     22         5/0/0    98.68%      0.01
+ 0              22      0         5/0/0    99.44%      0.01
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       2860
+ Possibly detected                PT          0
+ Undetectable                     UD         16
+ ATPG untestable                  AU         16
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              2892
+ test coverage                            99.44%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1

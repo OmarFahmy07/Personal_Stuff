@@ -1,0 +1,36 @@
+{D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v} {1 {vlog -work work -vopt -stats=none {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v}
+QuestaSim-64 vlog 2023.1 Compiler 2023.01 Jan 23 2023
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v} {1 {vlog -work work -vopt -stats=none {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v}
+QuestaSim-64 vlog 2023.1 Compiler 2023.01 Jan 23 2023
+-- Compiling module ffe
+
+Top level modules:
+	ffe
+
+} {} {}} {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v} {1 {vlog -work work -vopt -stats=none {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v}
+QuestaSim-64 vlog 2023.1 Compiler 2023.01 Jan 23 2023
+-- Compiling module pulse_gen_sync
+
+Top level modules:
+	pulse_gen_sync
+
+} {} {}} {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v} {1 {vlog -work work -vopt -stats=none {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v}
+QuestaSim-64 vlog 2023.1 Compiler 2023.01 Jan 23 2023
+-- Compiling module ffe_tb
+
+Top level modules:
+	ffe_tb
+
+} {} {}} {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_top.v} {1 {vlog -work work -vopt -stats=none {D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_top.v}
+QuestaSim-64 vlog 2023.1 Compiler 2023.01 Jan 23 2023
+-- Compiling module ffe_top
+
+Top level modules:
+	ffe_top
+
+} {} {}}

@@ -1,0 +1,1214 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module System_Top
+System_Top
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries           #"
+#      #setting Design Libraries           #
+puts "###########################################"
+###########################################
+#Add the path of the libraries to the search_path variable
+lappend search_path /home/IC/Labs/Lab_DFT_2/std_cells
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Lab_DFT_2/std_cells
+lappend search_path /home/IC/Labs/Lab_DFT_2/rtl
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Lab_DFT_2/std_cells /home/IC/Labs/Lab_DFT_2/rtl
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+######################## Reading RTL Files #################################
+puts "###########################################"
+###########################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+puts "###########################################"
+###########################################
+set file_format verilog
+verilog
+read_file -format $file_format ALU.v
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Loading verilog file '/home/IC/Labs/Lab_DFT_2/rtl/ALU.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Lab_DFT_2/rtl/ALU.v
+
+Statistics for case statements in always block at line 34 in file
+	'/home/IC/Labs/Lab_DFT_2/rtl/ALU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            40            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ALU line 20 in file
+		'/home/IC/Labs/Lab_DFT_2/rtl/ALU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ALU_OUT_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    OUT_VALID_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Lab_DFT_2/rtl/ALU.db:ALU'
+Loaded 1 design.
+Current design is 'ALU'.
+ALU
+read_file -format $file_format ClkDiv.v
+Loading verilog file '/home/IC/Labs/Lab_DFT_2/rtl/ClkDiv.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Lab_DFT_2/rtl/ClkDiv.v
+
+Inferred memory devices in process
+	in routine ClkDiv line 25 in file
+		'/home/IC/Labs/Lab_DFT_2/rtl/ClkDiv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| i_div_ratio_reg_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ClkDiv line 30 in file
+		'/home/IC/Labs/Lab_DFT_2/rtl/ClkDiv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  odd_edge_tog_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     div_clk_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Lab_DFT_2/rtl/ClkDiv.db:ClkDiv'
+Loaded 1 design.
+Current design is 'ClkDiv'.
+ClkDiv
+read_file -format $file_format CLK_GATE.v
+Loading verilog file '/home/IC/Labs/Lab_DFT_2/rtl/CLK_GATE.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Lab_DFT_2/rtl/CLK_GATE.v
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Lab_DFT_2/rtl/CLK_GATE.db:CLK_GATE'
+Loaded 1 design.
+Current design is 'CLK_GATE'.
+CLK_GATE
+read_file -format $file_format RegFile.v
+Loading verilog file '/home/IC/Labs/Lab_DFT_2/rtl/RegFile.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Lab_DFT_2/rtl/RegFile.v
+
+Inferred memory devices in process
+	in routine RegFile line 22 in file
+		'/home/IC/Labs/Lab_DFT_2/rtl/RegFile.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     RdData_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     regArr_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|    RegFile/38    |   16   |    8    |      4       | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Lab_DFT_2/rtl/RegFile.db:RegFile'
+Loaded 1 design.
+Current design is 'RegFile'.
+RegFile
+read_file -format $file_format mux2X1.v
+Loading verilog file '/home/IC/Labs/Lab_DFT_2/rtl/mux2X1.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Lab_DFT_2/rtl/mux2X1.v
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Lab_DFT_2/rtl/mux2X1.db:mux2X1'
+Loaded 1 design.
+Current design is 'mux2X1'.
+mux2X1
+read_file -format $file_format System_Top.v
+Loading verilog file '/home/IC/Labs/Lab_DFT_2/rtl/System_Top.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Lab_DFT_2/rtl/System_Top.v
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Lab_DFT_2/rtl/System_Top.db:System_Top'
+Loaded 1 design.
+Current design is 'System_Top'.
+System_Top
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'System_Top'.
+{System_Top}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'System_Top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/IC/Labs/Lab_DFT_2/rtl/System_Top.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Tue Jul 12 23:24:40 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      3
+    Unconnected ports (LINT-28)                                     3
+
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'ALU', cell 'C310' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'C311' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'C312' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'C313' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'C338' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'C340' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'C342' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv', cell 'C120' does not drive any nets. (LINT-1)
+Warning: In design 'System_Top', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'System_Top', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'System_Top', port 'SO' is not connected to any nets. (LINT-28)
+1
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source ./cons.tcl
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+#################### Archirecture Scan Chains #########################
+puts "###############################################"
+###############################################
+puts "############ Configure scan chains ############"
+############ Configure scan chains ############
+puts "###############################################"
+###############################################
+set_scan_configuration -clock_mixing no_mix                         -style multiplexed_flip_flop                        -replace true -max_length 100  
+Accepted scan configuration for modes: all_dft
+1
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+#test_ready compile
+compile -scan
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 11 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design System_Top has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ClkDiv'
+  Processing 'CLK_GATE'
+  Processing 'RegFile'
+  Processing 'ALU'
+  Processing 'mux2X1_0'
+  Processing 'System_Top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'ClkDiv_DW01_inc_0'
+  Processing 'ClkDiv_DW01_cmp6_0'
+  Processing 'ClkDiv_DW01_cmp6_1'
+  Processing 'ClkDiv_DW01_dec_0'
+  Processing 'ALU_DW_div_uns_0'
+  Processing 'ALU_DW01_sub_0'
+  Processing 'ALU_DW01_add_0'
+  Processing 'ALU_DW01_cmp6_0'
+  Processing 'ALU_DW02_mult_0'
+  Processing 'ALU_DW01_add_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  411544.6      0.00       0.0    1860.3                          
+    0:00:03  411544.6      0.00       0.0    1860.3                          
+    0:00:03  411544.6      0.00       0.0    1860.3                          
+    0:00:03  411544.6      0.00       0.0    1860.3                          
+    0:00:03  411544.6      0.00       0.0    1860.3                          
+    0:00:04  397722.2      0.00       0.0    1848.1                          
+    0:00:04  397691.6      0.00       0.0    1847.9                          
+    0:00:04  397691.6      0.00       0.0    1833.7                          
+    0:00:04  397691.6      0.00       0.0    1833.7                          
+    0:00:04  397691.6      0.00       0.0    1833.7                          
+    0:00:04  397691.6      0.00       0.0    1833.7                          
+    0:00:04  397691.6      0.00       0.0    1833.7                          
+    0:00:04  397706.9      0.00       0.0    1825.7                          
+    0:00:04  398302.2      0.00       0.0    1824.3                          
+    0:00:04  398569.3      0.00       0.0    1824.1                          
+    0:00:04  398569.3      0.00       0.0    1824.1                          
+    0:00:04  398569.3      0.00       0.0    1824.1                          
+    0:00:04  398569.3      0.00       0.0    1824.1                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04  398569.3      0.00       0.0    1824.1                          
+    0:00:04  398569.3      0.00       0.0    1824.1                          
+    0:00:04  395758.7      0.00       0.0    1828.1                          
+    0:00:05  375822.1      0.00       0.0    1838.6                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  375822.1      0.00       0.0    1838.6                          
+    0:00:05  377562.1      0.00       0.0    1823.9 net2630                  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07  377562.1      0.00       0.0    1823.9                          
+    0:00:07  377562.1      0.00       0.0    1823.9                          
+    0:00:07  374825.6      0.00       0.0    1823.9                          
+    0:00:07  374391.5      0.00       0.0    1823.9                          
+    0:00:07  374102.1      0.00       0.0    1823.9                          
+    0:00:07  373957.4      0.00       0.0    1823.9                          
+    0:00:07  373812.7      0.00       0.0    1823.9                          
+    0:00:07  373812.7      0.00       0.0    1823.9                          
+    0:00:07  373812.7      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+    0:00:07  373778.6      0.00       0.0    1823.9                          
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+################################################################### 
+# Setting Test Timing Variables
+################################################################### 
+# Preclock Measure Protocol (default protocol)
+set test_default_period 100
+100
+set test_default_delay 0
+0
+set test_default_bidir_delay 0
+0
+set test_default_strobe 20
+20
+set test_default_strobe_width 0
+0
+########################## Define DFT Signals ##########################
+set_dft_signal -port [get_ports scan_clk]  -type ScanClock   -view existing_dft  -timing {30 60}
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports scan_rst]  -type Reset       -view existing_dft  -active_state 0
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports test_mode] -type Constant    -view existing_dft  -active_state 1 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports test_mode] -type TestMode    -view spec          -active_state 1 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SE]        -type ScanEnable  -view spec          -active_state 1   -usage scan
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view spec 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SO]        -type ScanDataOut -view spec  
+Accepted dft signal specification for modes: all_dft
+1
+############################# Create Test Protocol #######################
+create_test_protocol
+In mode: all_dft...
+
+Information: Starting test protocol creation. (TEST-219)
+  ...reading user specified clock signals...
+Information: Identified system/test clock port scan_clk (30.0,60.0). (TEST-265)
+  ...reading user specified asynchronous signals...
+Information: Identified active low asynchronous control port scan_rst. (TEST-266)
+1
+###################### Pre-DFT Design Rule Checking #######################
+dft_drc -verbose
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell U0_CLK_GATE/U0_TLATNCAX12M has constant 1 value. (TEST-505)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 1
+
+-----------------------------------------------------------------
+
+1 OTHER VIOLATION
+     1 Cell is constant 1 violation (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  1 out of 163 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell has constant 1 value
+         U0_CLK_GATE/U0_TLATNCAX12M
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 162 cells are valid scan cells
+         U0_ALU/OUT_VALID_reg
+         U0_ALU/ALU_OUT_reg[6]
+         U0_ALU/ALU_OUT_reg[7]
+         U0_ALU/ALU_OUT_reg[4]
+         U0_ALU/ALU_OUT_reg[5]
+         U0_ALU/ALU_OUT_reg[3]
+         U0_ALU/ALU_OUT_reg[2]
+         U0_ALU/ALU_OUT_reg[1]
+         U0_ALU/ALU_OUT_reg[0]
+         U0_RegFile/regArr_reg[1][5]
+         U0_RegFile/regArr_reg[1][4]
+         U0_RegFile/regArr_reg[1][1]
+         U0_RegFile/regArr_reg[1][0]
+         U0_RegFile/regArr_reg[15][7]
+         U0_RegFile/regArr_reg[15][6]
+         U0_RegFile/regArr_reg[15][5]
+         U0_RegFile/regArr_reg[15][4]
+         U0_RegFile/regArr_reg[15][3]
+         U0_RegFile/regArr_reg[15][2]
+         U0_RegFile/regArr_reg[15][1]
+         U0_RegFile/regArr_reg[15][0]
+         U0_RegFile/regArr_reg[14][7]
+         U0_RegFile/regArr_reg[14][6]
+         U0_RegFile/regArr_reg[14][5]
+         U0_RegFile/regArr_reg[14][4]
+         U0_RegFile/regArr_reg[14][3]
+         U0_RegFile/regArr_reg[14][2]
+         U0_RegFile/regArr_reg[14][1]
+         U0_RegFile/regArr_reg[14][0]
+         U0_RegFile/regArr_reg[13][7]
+         U0_RegFile/regArr_reg[13][6]
+         U0_RegFile/regArr_reg[13][5]
+         U0_RegFile/regArr_reg[13][4]
+         U0_RegFile/regArr_reg[13][3]
+         U0_RegFile/regArr_reg[13][2]
+         U0_RegFile/regArr_reg[13][1]
+         U0_RegFile/regArr_reg[13][0]
+         U0_RegFile/regArr_reg[12][7]
+         U0_RegFile/regArr_reg[12][6]
+         U0_RegFile/regArr_reg[12][5]
+         U0_RegFile/regArr_reg[12][4]
+         U0_RegFile/regArr_reg[12][3]
+         U0_RegFile/regArr_reg[12][2]
+         U0_RegFile/regArr_reg[12][1]
+         U0_RegFile/regArr_reg[12][0]
+         U0_RegFile/regArr_reg[11][7]
+         U0_RegFile/regArr_reg[11][6]
+         U0_RegFile/regArr_reg[11][5]
+         U0_RegFile/regArr_reg[11][4]
+         U0_RegFile/regArr_reg[11][3]
+         U0_RegFile/regArr_reg[11][2]
+         U0_RegFile/regArr_reg[11][1]
+         U0_RegFile/regArr_reg[9][7]
+         U0_RegFile/regArr_reg[9][6]
+         U0_RegFile/regArr_reg[9][5]
+         U0_RegFile/regArr_reg[9][4]
+         U0_RegFile/regArr_reg[9][3]
+         U0_RegFile/regArr_reg[9][2]
+         U0_RegFile/regArr_reg[9][1]
+         U0_RegFile/regArr_reg[10][7]
+         U0_RegFile/regArr_reg[10][6]
+         U0_RegFile/regArr_reg[10][5]
+         U0_RegFile/regArr_reg[10][4]
+         U0_RegFile/regArr_reg[10][3]
+         U0_RegFile/regArr_reg[10][2]
+         U0_RegFile/regArr_reg[10][1]
+         U0_RegFile/regArr_reg[8][7]
+         U0_RegFile/regArr_reg[8][6]
+         U0_RegFile/regArr_reg[8][5]
+         U0_RegFile/regArr_reg[8][4]
+         U0_RegFile/regArr_reg[8][3]
+         U0_RegFile/regArr_reg[8][2]
+         U0_RegFile/regArr_reg[8][1]
+         U0_RegFile/regArr_reg[11][0]
+         U0_RegFile/regArr_reg[9][0]
+         U0_RegFile/regArr_reg[10][0]
+         U0_RegFile/regArr_reg[8][0]
+         U0_RegFile/regArr_reg[6][7]
+         U0_RegFile/regArr_reg[6][6]
+         U0_RegFile/regArr_reg[6][5]
+         U0_RegFile/regArr_reg[6][4]
+         U0_RegFile/regArr_reg[6][3]
+         U0_RegFile/regArr_reg[6][2]
+         U0_RegFile/regArr_reg[6][1]
+         U0_RegFile/regArr_reg[6][0]
+         U0_RegFile/regArr_reg[4][7]
+         U0_RegFile/regArr_reg[4][6]
+         U0_RegFile/regArr_reg[4][5]
+         U0_RegFile/regArr_reg[4][4]
+         U0_RegFile/regArr_reg[4][3]
+         U0_RegFile/regArr_reg[4][2]
+         U0_RegFile/regArr_reg[4][1]
+         U0_RegFile/regArr_reg[4][0]
+         U0_RegFile/regArr_reg[7][7]
+         U0_RegFile/regArr_reg[7][6]
+         U0_RegFile/regArr_reg[7][5]
+         U0_RegFile/regArr_reg[7][4]
+         U0_RegFile/regArr_reg[7][3]
+         U0_RegFile/regArr_reg[7][2]
+         U0_RegFile/regArr_reg[7][1]
+         U0_RegFile/regArr_reg[7][0]
+         U0_RegFile/regArr_reg[5][7]
+         U0_RegFile/regArr_reg[5][6]
+         U0_RegFile/regArr_reg[5][5]
+         U0_RegFile/regArr_reg[5][4]
+         U0_RegFile/regArr_reg[5][3]
+         U0_RegFile/regArr_reg[5][2]
+         U0_RegFile/regArr_reg[5][1]
+         U0_RegFile/regArr_reg[5][0]
+         U0_RegFile/regArr_reg[2][7]
+         U0_RegFile/regArr_reg[2][6]
+         U0_RegFile/regArr_reg[2][5]
+         U0_RegFile/regArr_reg[2][4]
+         U0_RegFile/regArr_reg[2][3]
+         U0_RegFile/regArr_reg[2][2]
+         U0_RegFile/regArr_reg[2][1]
+         U0_RegFile/regArr_reg[3][7]
+         U0_RegFile/regArr_reg[3][6]
+         U0_RegFile/regArr_reg[3][5]
+         U0_RegFile/regArr_reg[3][4]
+         U0_RegFile/regArr_reg[3][3]
+         U0_RegFile/regArr_reg[3][2]
+         U0_RegFile/regArr_reg[3][1]
+         U0_RegFile/regArr_reg[0][7]
+         U0_RegFile/regArr_reg[0][5]
+         U0_RegFile/regArr_reg[0][4]
+         U0_RegFile/regArr_reg[0][3]
+         U0_RegFile/regArr_reg[0][1]
+         U0_RegFile/regArr_reg[0][0]
+         U0_RegFile/regArr_reg[2][0]
+         U0_RegFile/regArr_reg[3][0]
+         U0_RegFile/regArr_reg[1][6]
+         U0_RegFile/RdData_reg[7]
+         U0_RegFile/RdData_reg[6]
+         U0_RegFile/RdData_reg[5]
+         U0_RegFile/RdData_reg[1]
+         U0_RegFile/RdData_reg[0]
+         U0_RegFile/RdData_reg[4]
+         U0_RegFile/RdData_reg[3]
+         U0_RegFile/RdData_reg[2]
+         U0_RegFile/regArr_reg[1][7]
+         U0_RegFile/regArr_reg[1][3]
+         U0_RegFile/regArr_reg[1][2]
+         U0_RegFile/regArr_reg[0][2]
+         U0_RegFile/regArr_reg[0][6]
+         U0_ClkDiv/i_div_ratio_reg_reg[0]
+         U0_ClkDiv/i_div_ratio_reg_reg[7]
+         U0_ClkDiv/i_div_ratio_reg_reg[6]
+         U0_ClkDiv/i_div_ratio_reg_reg[5]
+         U0_ClkDiv/i_div_ratio_reg_reg[4]
+         U0_ClkDiv/i_div_ratio_reg_reg[3]
+         U0_ClkDiv/i_div_ratio_reg_reg[2]
+         U0_ClkDiv/i_div_ratio_reg_reg[1]
+         U0_ClkDiv/odd_edge_tog_reg
+         U0_ClkDiv/div_clk_reg
+         U0_ClkDiv/count_reg[0]
+         U0_ClkDiv/count_reg[6]
+         U0_ClkDiv/count_reg[5]
+         U0_ClkDiv/count_reg[4]
+         U0_ClkDiv/count_reg[3]
+         U0_ClkDiv/count_reg[2]
+         U0_ClkDiv/count_reg[1]
+
+Information: Test design rule checking completed. (TEST-123)
+1
+############################# Preview DFT ##############################
+preview_dft -show scan_summary
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : System_Top
+Version: K-2015.06
+Date   : Tue Jul 12 23:25:01 2022
+****************************************
+
+Number of chains: 2
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+Chain      Scan Ports (si --> so)        # of Cells   Inst/Chain               Clock (port, time, edge)
+-----      ----------------------        ----------   ----------               ------------------------
+S 1        SI -->  SO                            81   U0_ALU/ALU_OUT_reg[0]    (scan_clk, 30.0, rising) 
+S 2        test_si2 -->  test_so2                81   U0_RegFile/regArr_reg[5][7]
+                            (scan_clk, 30.0, rising) 
+1
+############################# Insert DFT ##############################
+insert_dft
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+Resetting current test mode
+  Beginning Mapping Optimizations
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+
+
+  Beginning Phase 1 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:23  419418.8      0.00       0.0    1829.6 U0_RegFile/RdData[0]     
+    0:00:23  419418.8      0.00       0.0    1829.4 U0_RegFile/RdData[1]     
+    0:00:23  419418.8      0.00       0.0    1829.3 U0_RegFile/RdData[2]     
+    0:00:23  419418.8      0.00       0.0    1829.2 U0_RegFile/RdData[3]     
+    0:00:23  419418.8      0.00       0.0    1829.1 U0_RegFile/RdData[4]     
+    0:00:23  419418.8      0.00       0.0    1829.0 U0_RegFile/RdData[5]     
+    0:00:23  419418.8      0.00       0.0    1828.8 U0_RegFile/RdData[6]     
+    0:00:23  419418.8      0.00       0.0    1828.7 U0_RegFile/RdData[7]     
+    0:00:23  419849.4      0.00       0.0    1828.4 U0_RegFile/REG0[0]       
+    0:00:23  419849.4      0.00       0.0    1828.4 U0_RegFile/REG0[0]       
+    0:00:23  419849.4      0.00       0.0    1828.4 U0_RegFile/REG0[0]       
+    0:00:23  420280.0      0.00       0.0    1828.1 U0_RegFile/REG0[5]       
+    0:00:23  420280.0      0.00       0.0    1828.1 U0_RegFile/REG0[5]       
+    0:00:23  420280.0      0.00       0.0    1828.1 U0_RegFile/REG0[5]       
+    0:00:23  420710.5      0.00       0.0    1827.8 U0_RegFile/REG0[1]       
+    0:00:23  420710.5      0.00       0.0    1827.8 U0_RegFile/REG0[1]       
+    0:00:23  420710.5      0.00       0.0    1827.8 U0_RegFile/REG0[1]       
+    0:00:23  421141.1      0.00       0.0    1827.5 U0_RegFile/REG0[4]       
+    0:00:23  421141.1      0.00       0.0    1827.5 U0_RegFile/REG0[4]       
+    0:00:23  421141.1      0.00       0.0    1827.5 U0_RegFile/REG0[4]       
+    0:00:23  421571.7      0.00       0.0    1827.2 U0_RegFile/REG0[3]       
+    0:00:23  421571.7      0.00       0.0    1827.2 U0_RegFile/REG0[3]       
+    0:00:23  421571.7      0.00       0.0    1827.2 U0_RegFile/REG0[3]       
+    0:00:23  422002.3      0.00       0.0    1826.9 U0_RegFile/REG0[7]       
+    0:00:23  422002.3      0.00       0.0    1826.9 U0_RegFile/REG0[7]       
+    0:00:23  422002.3      0.00       0.0    1826.9 U0_RegFile/REG0[7]       
+    0:00:24  422432.9      0.00       0.0    1826.6 U0_RegFile/REG1[6]       
+    0:00:24  422432.9      0.00       0.0    1826.6 U0_RegFile/REG1[6]       
+    0:00:24  422432.9      0.00       0.0    1826.6 U0_RegFile/REG1[6]       
+    0:00:24  422863.5      0.00       0.0    1826.3 U0_RegFile/REG2[7]       
+    0:00:24  422863.5      0.00       0.0    1826.3 U0_RegFile/REG2[7]       
+    0:00:24  422863.5      0.00       0.0    1826.3 U0_RegFile/REG2[7]       
+    0:00:24  423294.1      0.00       0.0    1826.1 U0_RegFile/REG2[5]       
+    0:00:24  423294.1      0.00       0.0    1826.1 U0_RegFile/REG2[5]       
+    0:00:24  423294.1      0.00       0.0    1826.1 U0_RegFile/REG2[5]       
+    0:00:24  423724.7      0.00       0.0    1825.8 U0_RegFile/REG2[4]       
+    0:00:24  423724.7      0.00       0.0    1825.8 U0_RegFile/REG2[4]       
+    0:00:24  423724.7      0.00       0.0    1825.8 U0_RegFile/REG2[4]       
+    0:00:24  424155.3      0.00       0.0    1825.5 U0_RegFile/REG2[3]       
+    0:00:24  424155.3      0.00       0.0    1825.5 U0_RegFile/REG2[3]       
+    0:00:24  424155.3      0.00       0.0    1825.5 U0_RegFile/REG2[3]       
+    0:00:24  424585.9      0.00       0.0    1825.2 U0_RegFile/REG2[1]       
+    0:00:24  424585.9      0.00       0.0    1825.2 U0_RegFile/REG2[1]       
+    0:00:24  424585.9      0.00       0.0    1825.2 U0_RegFile/REG2[1]       
+    0:00:24  425016.5      0.00       0.0    1825.0 U0_RegFile/REG2[0]       
+    0:00:24  425016.5      0.00       0.0    1825.0 U0_RegFile/REG2[0]       
+    0:00:24  425016.5      0.00       0.0    1825.0 U0_RegFile/REG2[0]       
+    0:00:24  425447.1      0.00       0.0    1824.7 U0_RegFile/REG2[6]       
+    0:00:24  425447.1      0.00       0.0    1824.7 U0_RegFile/REG2[6]       
+    0:00:24  425447.1      0.00       0.0    1824.7 U0_RegFile/REG2[6]       
+    0:00:24  425877.7      0.00       0.0    1824.4 U0_RegFile/REG2[2]       
+    0:00:24  425877.7      0.00       0.0    1824.4 U0_RegFile/REG2[2]       
+    0:00:24  425877.7      0.00       0.0    1824.4 U0_RegFile/REG2[2]       
+    0:00:24  426308.2      0.00       0.0    1824.4 U0_RegFile/net9855       
+    0:00:24  426308.2      0.00       0.0    1824.4 U0_RegFile/net9855       
+    0:00:24  426308.2      0.00       0.0    1824.4 U0_RegFile/net9855       
+    0:00:24  426601.2      0.00       0.0    1824.4 U0_RegFile/net9885       
+    0:00:24  426601.2      0.00       0.0    1824.4 U0_RegFile/net9885       
+    0:00:24  426601.2      0.00       0.0    1824.4 U0_RegFile/net9885       
+    0:00:24  426601.2      0.00       0.0    1824.4 U0_RegFile/net9891       
+    0:00:24  426457.7      0.00       0.0    1824.4 U0_RegFile/net9862       
+    0:00:24  426314.1      0.00       0.0    1824.3 U0_RegFile/net9868       
+    0:00:24  426170.6      0.00       0.0    1824.3 U0_RegFile/net9886       
+    0:00:24  426027.1      0.00       0.0    1824.3 U0_RegFile/net9856       
+    0:00:24  425883.5      0.00       0.0    1824.3 U0_RegFile/net9874       
+    0:00:24  425740.0      0.00       0.0    1824.3 U0_RegFile/net9880       
+    0:00:24  425596.5      0.00       0.0    1824.2 U0_RegFile/net9898       
+    0:00:24  425452.9      0.00       0.0    1824.2 U0_RegFile/net9904       
+    0:00:24  425309.4      0.00       0.0    1824.2 U0_RegFile/net9910       
+    0:00:24  425165.9      0.00       0.0    1824.1 U0_RegFile/net9916       
+    0:00:24  425022.4      0.00       0.0    1824.1 U0_RegFile/net9922       
+    0:00:24  424878.8      0.00       0.0    1824.1 U0_RegFile/net9928       
+    0:00:24  425028.2      0.00       0.0    1824.1 U0_RegFile/net9897       
+    0:00:24  425177.6      0.00       0.0    1824.0 U0_RegFile/net9903       
+    0:00:24  425327.1      0.00       0.0    1824.0 U0_RegFile/net9909       
+    0:00:24  425476.5      0.00       0.0    1824.0 U0_RegFile/net9915       
+    0:00:24  425625.9      0.00       0.0    1824.0 U0_RegFile/net9921       
+    0:00:24  425482.4      0.00       0.0    1824.0 U0_RegFile/net9933       
+    0:00:24  425338.8      0.00       0.0    1823.9 U0_RegFile/net9939       
+    0:00:24  425488.2      0.00       0.0    1823.9 U0_RegFile/net9927       
+    0:00:24  425637.7      0.00       0.0    1823.9 U0_RegFile/net9890       
+    0:00:24  425787.1      0.00       0.0    1823.9 U0_RegFile/net9944       
+    0:00:24  425936.5      0.00       0.0    1823.9 U0_RegFile/net9934       
+    0:00:24  426085.9      0.00       0.0    1823.8 U0_RegFile/net9940       
+    0:00:24  426235.3      0.00       0.0    1823.8 U0_RegFile/net9892       
+    0:00:24  426384.7      0.00       0.0    1823.8 U0_RegFile/net9975       
+    0:00:24  426534.1      0.00       0.0    1823.8 U0_RegFile/net9946       
+    0:00:24  427395.3      0.00       0.0    1823.8 U0_RegFile/net9879       
+    0:00:24  427395.3      0.00       0.0    1823.8 U0_RegFile/net9879       
+    0:00:24  427395.3      0.00       0.0    1823.8 U0_RegFile/net9879       
+    0:00:24  427395.3      0.00       0.0    1823.8 U0_RegFile/net9879       
+    0:00:24  427395.3      0.00       0.0    1823.8 U0_RegFile/net9879       
+    0:00:24  427395.3      0.00       0.0    1823.8 U0_RegFile/net9879       
+    0:00:24  428256.5      0.00       0.0    1823.8 U0_RegFile/net9867       
+    0:00:24  428256.5      0.00       0.0    1823.8 U0_RegFile/net9867       
+    0:00:24  428256.5      0.00       0.0    1823.8 U0_RegFile/net9867       
+    0:00:24  428256.5      0.00       0.0    1823.8 U0_RegFile/net9867       
+    0:00:24  428256.5      0.00       0.0    1823.8 U0_RegFile/net9867       
+    0:00:24  428256.5      0.00       0.0    1823.8 U0_RegFile/net9867       
+    0:00:24  428555.3      0.00       0.0    1823.7 U0_RegFile/net10295      
+    0:00:24  428555.3      0.00       0.0    1823.7 U0_RegFile/net10295      
+    0:00:24  428854.2      0.00       0.0    1823.7 U0_RegFile/net10283      
+    0:00:24  428854.2      0.00       0.0    1823.7 U0_RegFile/net10283      
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  429451.8      0.00       0.0    1823.5 U0_ClkDiv/i_div_ratio_reg[4]
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430049.5      0.00       0.0    1823.4 U0_ClkDiv/count[4]       
+    0:00:24  430198.9      0.00       0.0    1823.4 U0_ClkDiv/i_div_ratio_reg[6]
+    0:00:24  430198.9      0.00       0.0    1823.4 U0_ClkDiv/i_div_ratio_reg[6]
+    0:00:24  430198.9      0.00       0.0    1823.4 U0_ClkDiv/i_div_ratio_reg[6]
+
+
+  Beginning Phase 2 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+
+1
+compile -scan -incremental
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+
+Information: There are 25 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design System_Top has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Selecting implementations
+  Selecting implementations
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02  430198.9      0.00       0.0    1823.4                          
+    0:00:02  430198.9      0.00       0.0    1823.4                          
+    0:00:03  430198.9      0.00       0.0    1823.4                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  430198.9      0.00       0.0    1823.4                          
+    0:00:03  430198.9      0.00       0.0    1823.3 U0_RegFile/regArr[4][1]  
+    0:00:06  429762.4      0.00       0.0    1823.3 U0_RegFile/REG2[2]       
+    0:00:06  427155.3      0.00       0.0    1823.3 U0_RegFile/n673          
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Lab_DFT_2/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+###################### Design Rule Checking #######################
+dft_drc -verbose -coverage_estimate
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell U0_CLK_GATE/U0_TLATNCAX12M has constant 1 value. (TEST-505)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 1
+
+-----------------------------------------------------------------
+
+1 OTHER VIOLATION
+     1 Cell is constant 1 violation (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  1 out of 163 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell has constant 1 value
+         U0_CLK_GATE/U0_TLATNCAX12M
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 162 cells are valid scan cells
+         U0_ALU/OUT_VALID_reg
+         U0_ALU/ALU_OUT_reg[6]
+         U0_ALU/ALU_OUT_reg[7]
+         U0_ALU/ALU_OUT_reg[4]
+         U0_ALU/ALU_OUT_reg[5]
+         U0_ALU/ALU_OUT_reg[3]
+         U0_ALU/ALU_OUT_reg[2]
+         U0_ALU/ALU_OUT_reg[1]
+         U0_ALU/ALU_OUT_reg[0]
+         U0_RegFile/regArr_reg[1][5]
+         U0_RegFile/regArr_reg[1][4]
+         U0_RegFile/regArr_reg[1][1]
+         U0_RegFile/regArr_reg[1][0]
+         U0_RegFile/regArr_reg[15][7]
+         U0_RegFile/regArr_reg[15][6]
+         U0_RegFile/regArr_reg[15][5]
+         U0_RegFile/regArr_reg[15][4]
+         U0_RegFile/regArr_reg[15][3]
+         U0_RegFile/regArr_reg[15][2]
+         U0_RegFile/regArr_reg[14][7]
+         U0_RegFile/regArr_reg[14][6]
+         U0_RegFile/regArr_reg[14][5]
+         U0_RegFile/regArr_reg[14][4]
+         U0_RegFile/regArr_reg[14][3]
+         U0_RegFile/regArr_reg[14][2]
+         U0_RegFile/regArr_reg[14][1]
+         U0_RegFile/regArr_reg[14][0]
+         U0_RegFile/regArr_reg[13][7]
+         U0_RegFile/regArr_reg[13][6]
+         U0_RegFile/regArr_reg[13][5]
+         U0_RegFile/regArr_reg[13][4]
+         U0_RegFile/regArr_reg[13][3]
+         U0_RegFile/regArr_reg[13][2]
+         U0_RegFile/regArr_reg[13][1]
+         U0_RegFile/regArr_reg[12][0]
+         U0_RegFile/regArr_reg[11][7]
+         U0_RegFile/regArr_reg[11][6]
+         U0_RegFile/regArr_reg[11][5]
+         U0_RegFile/regArr_reg[11][4]
+         U0_RegFile/regArr_reg[11][3]
+         U0_RegFile/regArr_reg[11][2]
+         U0_RegFile/regArr_reg[9][7]
+         U0_RegFile/regArr_reg[9][6]
+         U0_RegFile/regArr_reg[9][5]
+         U0_RegFile/regArr_reg[9][4]
+         U0_RegFile/regArr_reg[9][3]
+         U0_RegFile/regArr_reg[9][2]
+         U0_RegFile/regArr_reg[9][1]
+         U0_RegFile/regArr_reg[10][7]
+         U0_RegFile/regArr_reg[10][6]
+         U0_RegFile/regArr_reg[10][5]
+         U0_RegFile/regArr_reg[10][4]
+         U0_RegFile/regArr_reg[10][3]
+         U0_RegFile/regArr_reg[10][2]
+         U0_RegFile/regArr_reg[10][1]
+         U0_RegFile/regArr_reg[10][0]
+         U0_RegFile/regArr_reg[8][0]
+         U0_RegFile/regArr_reg[6][7]
+         U0_RegFile/regArr_reg[6][6]
+         U0_RegFile/regArr_reg[6][5]
+         U0_RegFile/regArr_reg[6][4]
+         U0_RegFile/regArr_reg[6][3]
+         U0_RegFile/regArr_reg[6][2]
+         U0_RegFile/regArr_reg[6][1]
+         U0_RegFile/regArr_reg[6][0]
+         U0_RegFile/regArr_reg[4][0]
+         U0_RegFile/regArr_reg[7][7]
+         U0_RegFile/regArr_reg[7][6]
+         U0_RegFile/regArr_reg[7][5]
+         U0_RegFile/regArr_reg[7][4]
+         U0_RegFile/regArr_reg[7][3]
+         U0_RegFile/regArr_reg[7][2]
+         U0_RegFile/regArr_reg[5][7]
+         U0_RegFile/regArr_reg[5][6]
+         U0_RegFile/regArr_reg[5][5]
+         U0_RegFile/regArr_reg[5][4]
+         U0_RegFile/regArr_reg[5][3]
+         U0_RegFile/regArr_reg[5][2]
+         U0_RegFile/regArr_reg[5][1]
+         U0_RegFile/regArr_reg[2][7]
+         U0_RegFile/regArr_reg[2][5]
+         U0_RegFile/regArr_reg[2][4]
+         U0_RegFile/regArr_reg[2][3]
+         U0_RegFile/regArr_reg[3][7]
+         U0_RegFile/regArr_reg[3][6]
+         U0_RegFile/regArr_reg[3][5]
+         U0_RegFile/regArr_reg[0][7]
+         U0_RegFile/regArr_reg[0][0]
+         U0_RegFile/regArr_reg[2][0]
+         U0_RegFile/regArr_reg[3][0]
+         U0_RegFile/regArr_reg[1][6]
+         U0_RegFile/RdData_reg[7]
+         U0_RegFile/RdData_reg[6]
+         U0_RegFile/RdData_reg[5]
+         U0_RegFile/RdData_reg[1]
+         U0_RegFile/RdData_reg[4]
+         U0_RegFile/RdData_reg[3]
+         U0_RegFile/RdData_reg[2]
+         U0_RegFile/regArr_reg[1][7]
+         U0_RegFile/regArr_reg[1][3]
+         U0_RegFile/regArr_reg[1][2]
+         U0_RegFile/regArr_reg[0][2]
+         U0_RegFile/regArr_reg[0][6]
+         U0_RegFile/RdData_reg[0]
+         U0_RegFile/regArr_reg[12][7]
+         U0_RegFile/regArr_reg[13][0]
+         U0_RegFile/regArr_reg[12][5]
+         U0_RegFile/regArr_reg[12][6]
+         U0_RegFile/regArr_reg[12][3]
+         U0_RegFile/regArr_reg[12][4]
+         U0_RegFile/regArr_reg[12][1]
+         U0_RegFile/regArr_reg[12][2]
+         U0_RegFile/regArr_reg[8][7]
+         U0_RegFile/regArr_reg[9][0]
+         U0_RegFile/regArr_reg[8][5]
+         U0_RegFile/regArr_reg[8][6]
+         U0_RegFile/regArr_reg[8][3]
+         U0_RegFile/regArr_reg[8][4]
+         U0_RegFile/regArr_reg[8][1]
+         U0_RegFile/regArr_reg[8][2]
+         U0_RegFile/regArr_reg[4][7]
+         U0_RegFile/regArr_reg[5][0]
+         U0_RegFile/regArr_reg[4][5]
+         U0_RegFile/regArr_reg[4][6]
+         U0_RegFile/regArr_reg[4][3]
+         U0_RegFile/regArr_reg[4][4]
+         U0_RegFile/regArr_reg[4][1]
+         U0_RegFile/regArr_reg[4][2]
+         U0_RegFile/regArr_reg[0][4]
+         U0_RegFile/regArr_reg[0][5]
+         U0_RegFile/regArr_reg[15][0]
+         U0_RegFile/regArr_reg[15][1]
+         U0_RegFile/regArr_reg[11][0]
+         U0_RegFile/regArr_reg[11][1]
+         U0_RegFile/regArr_reg[7][0]
+         U0_RegFile/regArr_reg[7][1]
+         U0_RegFile/regArr_reg[3][3]
+         U0_RegFile/regArr_reg[3][4]
+         U0_RegFile/regArr_reg[3][1]
+         U0_RegFile/regArr_reg[3][2]
+         U0_RegFile/regArr_reg[2][2]
+         U0_RegFile/regArr_reg[2][6]
+         U0_RegFile/regArr_reg[0][1]
+         U0_RegFile/regArr_reg[0][3]
+         U0_RegFile/regArr_reg[2][1]
+         U0_ClkDiv/i_div_ratio_reg_reg[7]
+         U0_ClkDiv/i_div_ratio_reg_reg[6]
+         U0_ClkDiv/i_div_ratio_reg_reg[5]
+         U0_ClkDiv/i_div_ratio_reg_reg[4]
+         U0_ClkDiv/i_div_ratio_reg_reg[3]
+         U0_ClkDiv/i_div_ratio_reg_reg[2]
+         U0_ClkDiv/i_div_ratio_reg_reg[1]
+         U0_ClkDiv/count_reg[0]
+         U0_ClkDiv/count_reg[6]
+         U0_ClkDiv/count_reg[5]
+         U0_ClkDiv/count_reg[4]
+         U0_ClkDiv/count_reg[3]
+         U0_ClkDiv/count_reg[2]
+         U0_ClkDiv/count_reg[1]
+         U0_ClkDiv/odd_edge_tog_reg
+         U0_ClkDiv/div_clk_reg
+         U0_ClkDiv/i_div_ratio_reg_reg[0]
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 8046 faults were added to fault list.
+ 0            3871   2640         0/0/0    66.83%      0.00
+ 0            1162   1478         0/0/0    81.27%      0.00
+ 0             408   1070         0/0/0    86.34%      0.00
+ 0             484    586         0/0/0    92.36%      0.00
+ 0             180    406         0/0/1    94.59%      0.01
+ 0             150    254         1/0/2    96.48%      0.01
+ 0              94    158         2/0/2    97.67%      0.01
+ 0              51    107         2/0/2    98.31%      0.01
+ 0              56     51         2/0/4    99.01%      0.01
+ 0              39      8         5/0/4    99.54%      0.01
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       8001
+ Possibly detected                PT          0
+ Undetectable                     UD          8
+ ATPG untestable                  AU         29
+ Not detected                     ND          8
+ -----------------------------------------------
+ total faults                              8046
+ test coverage                            99.54%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1
+#############################################################################
+# Write out files
+#############################################################################
+write_file -format verilog -hierarchy -output sys_dft.v
+Writing verilog file '/home/IC/Labs/Lab_DFT_2/dft/sys_dft.v'.
+Warning: Verilog writer has added 8 nets to module ALU_test_1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+################# starting graphical user interface #######################
+gui_start
+Current design is 'System_Top'.
+#exit
+dc_shell> dc_shell> 

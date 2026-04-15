@@ -1,0 +1,123 @@
+Check the 2 written papers (photos 1 and 2).
+
+To understand any region on the VTC curve, we write KCL at the output node.
+
+The switching threshold is the point at which Vin = Vout.
+
+For an NMOS depletion load inverter:
+1) Find V_OH and V_OL.
+2) Draw its VTC showing the noise margins.
+3) Find V_IH and V_IL.
+Solution in photos 1 & 2.
+
+Why should we avoid the high gain region in the VTC curve?
+Because it is too sensitive to noise.
+
+Solve sheet 1 parts d) & e) only. That is, shoof results parts a), b), c) 3ady.
+
+Lw fi w2t momken teb2a t7l question in photo 1 in sheet 1 folder. Answer in photo 2 in the same folder.
+
+Check paper 2 a5er goz2 (Delay).
+
+When a gate size is increased, its resistance decreases and capacitance increases. Thus, its intrinsic delay does not change,
+while its extrinsic delay decreases. Thus, when a gate size is increased, its propagation delay decreases. However, the load
+on the previous gate increases and hence its delay increases.
+
+When a gate is scaled, its intrinsic delay does not change.
+
+Switching power:
+switching = 2 transitions
+Energy drawn from the supply in 1 switching = C_L * VDD^2
+Energy dissipated as heat in PMOS during charging = Energy dissipated as heat in NMOS during discharging = C_L*VDD^2 / 2
+Psw = α*f*CL*V_DD^2
+α: number of switches per clock cycle
+α = 1 for a clock signal
+α = 0.5 for the most active signal in the design.
+
+Worst-case delay means only 1 branch shaghal.
+
+Solve sheet 2 number 2.
+
+Solve sheet 2 number 3 (a) (viii)
+
+If given the gate capacitance of an inverter, how to size it?
+Divide the capacitance by 3 teb2a gebt size el NMOS. Double it teb2a gebt size el PMOS. Example: If Cg = 6Co, yeb2a size el 
+NMOS = 6/3 = 2 w size el PMOS = 2 * 2 = 4.
+
+logical effort (g): the effort that a gate will exert to drive an identical gate.
+electrical effort (h): lw mesh ha drive an identical gate leya, eh el effort el habzelo relative lel habzelo lw identical?
+
+Steps to calculate the normalized intrinsic delay (p) of any gate:
+1) Size it such that it has pull-up & pull-down resistances = Ro.
+2) Count the number of caps at the output node (i.e. drain capacitance).
+3) Divide by 3.
+
+Steps to calculate the logical effort (g) of any gate:
+1) Size it such that it has pull-up & pull-down resistances = Ro.
+2) Count the number of caps at the input (i.e. gate capacitance).
+3) Divide by 3.
+
+Conclusion for logical effort is in photo 3.
+
+Solve the example in photo 4. Solution in photo 5.
+
+Disadvantages of static CMOS logic family compared to ratioed logic families:
+1) Area: due to the PUN that contains PMOS transistors which we size large to overcome their less mobility compared to NMOS.
+2) Delay: due to the PUN that contains large PMOS transistors and hence large caps at the output node. Also, the output of a
+gate is applied to the input of both PUN & PDN of the next gate, hence it sees larger loading and hence more delay.
+
+In dynamic CMOS logic, what are the limits on T_L and T_H?
+T_L >= 0.69 * Rp * C_L
+0.69 * (R_PDN + Rn) * C_L <= T_H < C_L * ΔV / I_leakage
+
+What are the advantages of dynamic CMOS gates over static ones?
+Dynamic CMOS gates are faster and smaller.
+
+Mention the 3 disadvantages of dynamic CMOS logic.
+1) Leakage current.
+2) Charge sharing.
+3) Cascading.
+
+Charge sharing equation in photo 6.
+
+A chain of domino logic is in photo 7.
+
+Solve sheet 3 no. 3.
+
+When sizing PUN & PDN and there is more than one branch, begin with the branch with least number of transistors.
+
+Check photo 8 for the circuit of charge keeper.
+
+Exams questions:
+----------------
+
+In enhancement-load inverter, to improve the value of V_OL, we should:
+1) Increase W/L of the driver.
+2) Decrease W/L of the driver.
+3) Increase W/L of the load.
+4) Decrease W/L of the load.
+Answer:
+V_OL heya el voltage drop el 3al driver. Bema eny 3ayez V_OL te2el, yeb2a either a2alel el resistance beta3t el driver or 
+azawed el resistance beta3t el load by increasing W/L of driver or decreasing W/L of load --> 1) & 4)
+
+Cdrain of a MOSFET depends on:
+1) Channel length.
+2) Channel width.
+3) Oxide thickness.
+4) All of the above.
+Answer: 2)
+
+In enhancement load logic, all the following exist except for:
+1) Can't have both Voh = Vdd and Vol = 0v.
+2) Have static current in at least one output.
+3) Output is a function of transistor parameters.
+4) Sharp transitions in VTC.
+Answer: 4)
+
+The following device work efficiently in transferring logic '1'.
+1) NMOS in saturation.
+2) PMOS in saturation.
+3) NMOS in ohmic.
+4) PMOS in ohmic.
+Answer:
+4)

@@ -1,0 +1,39 @@
+module HALF_ADDER (
+
+input a, b,
+output reg sum, cout);
+
+always @ (*)
+ begin
+ {cout,sum} = a + b ;
+ end
+ 
+ endmodule
+ 
+ 
+module FULL_ADDER (
+
+input a, b , cin ,
+output reg sum, cout);
+
+always @ (*)
+ begin
+ {cout,sum} = cin + a + b ;
+ end
+ 
+ endmodule
+ 
+ module my_adder (
+ input a, b , cin ,
+ output reg sum, cout);
+ 
+ parameter ADDER_TYPE = 1 ;
+ 
+ generate 
+   case (ADDER_TYPE) 
+     0 : HALF_ADDER U0 (.a(a), .b(b) , .sum(sum), .cout(cout)) ;
+     1 : FULL_ADDER U0 (.a(a), .b(b) , .cin(cin) ,.sum(sum), .cout(cout)) ;
+   endcase
+ endgenerate
+ 
+ endmodule  

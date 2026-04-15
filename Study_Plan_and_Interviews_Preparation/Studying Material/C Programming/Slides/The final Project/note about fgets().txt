@@ -1,0 +1,60 @@
+I have just come across a problem while using `fgets()` function that reads a string from the user. `fgets()` is usually used instead of `scanf()`
+because it can read a string including a SPACE character, unlike `scanf()` that places the null terminator once a SPACE character is entered.
+
+The problem with `fgets()` function is that it is thought that the function places a null terminator once you enter your string. Unexpectedly, this is not
+what happens! the truth is that it when you enter an NL feed character (i.e. when you press ENTER key) after you've entered your string, it actually places
+that NL feed character (which has an ASCII value of 10) after your string, and THEN places the NULL terminator.
+
+To make things clearer, assume you have an array of characters of a large enough size (let it be 100 characters, `char name [100]`) and you entered a
+name "Omar" using `fgets()` then you pressed the ENTER key. Since the character 'r' has the index 3, so it is expected that the index 4 is the NULL
+terminator. However, the index 4 is actually the NL feed character with ASCII value of 10, which has been stored in the array of characters after you
+have pressed the ENTER key, and the NULL terminator is actually placed at index 5. 
+
+If that was not clear, consider the following example:
+```
+char name [100];
+printf("Enter your name: ");
+fgets (name, 100, stdin); //Omar
+if (name [4] == 0) //NULL terminator ASCII value = 0
+{  
+   printf ("This is the NULL terminator!\n");
+}
+else if (name [4] == 10) //NL line feed ASCII value = 10
+{
+   printf("This is the NL line feed!\n");
+}
+if (name [5] == 0) //NULL terminator ASCII value = 0
+{
+   printf ("NULL terminator is found!\n");
+}
+```
+The output of the previous program will be:
+```
+This is the NL line feed!
+NULL terminator is found!
+```
+On the other hand, if we had used `scanf()` instead of `fgets()`:
+```
+char name [100];
+printf("Enter your name: ");
+scanf ("%s", name); //Omar
+if (name [4] == 0) //NULL terminator ASCII value = 0
+{  
+   printf ("This is the NULL terminator!");
+}
+else if (name [4] == 10) //NL line feed ASCII value = 10
+{
+   printf("This is the NL line feed!");
+}
+```
+The output would have been:
+```
+This is the NULL terminator!
+```
+Of course we know that `scanf()` has a problem that it is not helpful to read strings that include SPACES.
+
+Did I miss anything, guys? What do you think is the best way to read an array of characters including SPACES and at the same time have the NULL terminator
+placed immediately after the string?
+I will be more than happy to hear your opinions!
+
+REPLY: THIS IS NOT A THING THAT YOU HAVE DISCOVERED, THIS IS ACTUALLY DOCUMENTED IN THE STANDARD LIBRARY. READ THE fgets() FUNCTION DESCRIPTION TO MAKE SURE

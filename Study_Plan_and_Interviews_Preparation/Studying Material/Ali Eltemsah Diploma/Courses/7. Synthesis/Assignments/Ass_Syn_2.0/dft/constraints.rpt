@@ -1,0 +1,256 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : UART
+Version: K-2015.06
+Date   : Fri Aug 12 21:07:32 2022
+****************************************
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   P_DATA_RX[2]                 1.50          24.98         -23.48  (VIOLATED)
+       PIN :   U1_UART_Rx/U14/Y
+                                1.50          24.98         -23.48  (VIOLATED)
+   P_DATA_RX[6]                 1.50          24.98         -23.48  (VIOLATED)
+       PIN :   U1_UART_Rx/U16/Y
+                                1.50          24.98         -23.48  (VIOLATED)
+   STP_ERR_RX                   1.50          24.96         -23.46  (VIOLATED)
+       PIN :   U1_UART_Rx/U18/Y
+                                1.50          24.96         -23.46  (VIOLATED)
+   P_DATA_RX[4]                 1.50          24.96         -23.46  (VIOLATED)
+       PIN :   U1_UART_Rx/U12/Y
+                                1.50          24.96         -23.46  (VIOLATED)
+   TX_OUT                       1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U9/Y             1.50          24.36         -22.86  (VIOLATED)
+   DATA_VALID_RX                1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U1_UART_Rx/U10/Y
+                                1.50          24.36         -22.86  (VIOLATED)
+   BUSY_TX                      1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/U3/Y
+                                1.50          24.36         -22.86  (VIOLATED)
+   P_DATA_RX[3]                 1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U1_UART_Rx/U26/Y
+                                1.50          24.36         -22.86  (VIOLATED)
+   P_DATA_RX[5]                 1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U1_UART_Rx/U22/Y
+                                1.50          24.36         -22.86  (VIOLATED)
+   P_DATA_RX[7]                 1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U1_UART_Rx/U28/Y
+                                1.50          24.36         -22.86  (VIOLATED)
+   P_DATA_RX[1]                 1.50          24.36         -22.86  (VIOLATED)
+       PIN :   U1_UART_Rx/U24/Y
+                                1.50          24.36         -22.86  (VIOLATED)
+   P_DATA_RX[0]                 1.50          24.35         -22.85  (VIOLATED)
+       PIN :   U1_UART_Rx/U19/Y
+                                1.50          24.35         -22.85  (VIOLATED)
+   PAR_ERR_RX                   1.50          23.02         -21.52  (VIOLATED)
+       PIN :   U1_UART_Rx/U4/Y
+                                1.50          23.02         -21.52  (VIOLATED)
+   muxed_rst (dont_touch)       1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_rst_mux/U1/Y
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/current_state_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/current_state_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/busy_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/current_state_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[6]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[5]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[4]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[3]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[7]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/shift_reg_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/counter_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/counter_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/counter_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U1/done_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U2/parity_result_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U0_UART_Tx/U3/out_reg/SN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U0_FSM/current_state_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U0_FSM/current_state_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U0_FSM/data_valid_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U0_FSM/current_state_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U1_Sampler/sample1_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U1_Sampler/sample2_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U1_Sampler/sample3_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[5]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[3]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[7]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[4]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U2_Deserializer/shift_reg_reg[6]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/bit_counter_reg[3]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/bit_counter_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/edge_counter_reg[5]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/edge_counter_reg[4]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/edge_counter_reg[2]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/edge_counter_reg[3]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/edge_counter_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/edge_counter_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/bit_counter_reg[1]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U3_Counter/bit_counter_reg[0]/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U4_Parity/parity_error_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U5_Start/glitch_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+       PIN :   U1_UART_Rx/U6_Stop/stop_error_reg/RN
+                                1.50           5.21          -3.71  (VIOLATED)
+   U1_UART_Rx/n25               1.50           2.29          -0.79  (VIOLATED)
+       PIN :   U1_UART_Rx/U3/A
+                                1.50           2.29          -0.79  (VIOLATED)
+       PIN :   U1_UART_Rx/U1/A
+                                1.50           2.29          -0.79  (VIOLATED)
+       PIN :   U1_UART_Rx/U4/A
+                                1.50           2.29          -0.79  (VIOLATED)
+       PIN :   U1_UART_Rx/U21/Y
+                                1.50           2.29          -0.79  (VIOLATED)
+   U1_UART_Rx/n28               1.50           1.53          -0.03  (VIOLATED)
+       PIN :   U1_UART_Rx/U19/A
+                                1.50           1.53          -0.03  (VIOLATED)
+       PIN :   U1_UART_Rx/U30/A
+                                1.50           1.53          -0.03  (VIOLATED)
+       PIN :   U1_UART_Rx/U20/Y
+                                1.50           1.53          -0.03  (VIOLATED)
+   U1_UART_Rx/n13               1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U24/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U32/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U25/Y
+                                1.50           1.52          -0.02  (VIOLATED)
+   U1_UART_Rx/n7                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U28/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U34/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U29/Y
+                                1.50           1.52          -0.02  (VIOLATED)
+   U1_UART_Rx/n10               1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U26/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U33/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U27/Y
+                                1.50           1.52          -0.02  (VIOLATED)
+   U1_UART_Rx/n18               1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U22/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U31/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U23/Y
+                                1.50           1.52          -0.02  (VIOLATED)
+   U0_UART_Tx/U0/n27            1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/U3/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/U4/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U0_UART_Tx/U0/U5/Y
+                                1.50           1.52          -0.02  (VIOLATED)
+   U1_UART_Rx/n1                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U10/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U8/A
+                                1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U1_UART_Rx/U6/Y
+                                1.50           1.52          -0.02  (VIOLATED)
+   n10                          1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U9/A             1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U8/A             1.50           1.52          -0.02  (VIOLATED)
+       PIN :   U7/Y             1.50           1.52          -0.02  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      23               -302.97  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   BUSY_TX                      3.69          50.03         -46.34  (VIOLATED)
+   DATA_VALID_RX                3.69          50.03         -46.34  (VIOLATED)
+   PAR_ERR_RX                   3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[0]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[1]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[2]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[3]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[4]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[5]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[6]                 3.69          50.03         -46.34  (VIOLATED)
+   P_DATA_RX[7]                 3.69          50.03         -46.34  (VIOLATED)
+   STP_ERR_RX                   3.69          50.03         -46.34  (VIOLATED)
+   TX_OUT                       3.69          50.03         -46.34  (VIOLATED)
+   muxed_rst (dont_touch)       0.55           1.57          -1.01  (VIOLATED)
+   U1_UART_Rx/n25               0.18           0.24          -0.05  (VIOLATED)
+   U1_UART_Rx/U0_FSM/current_state[0]
+                                0.09           0.10          -0.01  (VIOLATED)
+   U0_UART_Tx/parity_result     0.09           0.10           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/ser_data_out      0.09           0.10           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/U1/shift_reg[1]
+                                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/n1                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/U1/shift_reg[2]
+                                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/U1/shift_reg[3]
+                                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/U1/shift_reg[4]
+                                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/U1/shift_reg[5]
+                                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+   U0_UART_Tx/U1/shift_reg[6]
+                                0.09           0.09           0.00  (VIOLATED: increase significant digits)
+
+   -----------------------------------------------------------------
+   Total                      25               -603.50  
+
+1

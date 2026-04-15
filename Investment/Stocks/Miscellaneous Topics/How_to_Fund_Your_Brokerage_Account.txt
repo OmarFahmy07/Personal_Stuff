@@ -1,0 +1,68 @@
+How to fund our brokerage account? 
+
+0. Lw kol 7aga fi el 7olool el t7t de mesh naf3a, fa 7awel tewsal le 7ad 3ayesh bara ye7awelak men el bank bta3o fel balad el howa 3ayesh fiha de lel 
+broker beta3ak. Options so far:
+	- Haytham Ashour (bank account in USA, best option of course!).
+	- Farnawany (RBC bank in Canada).
+	- Shaimaa o5t Daly (bank in Canada but not known yet).
+	- Matgarab tes2al Khaled keda howa fi bank eh aw so7abo fi Saudi Arabia fi bank eh, ma yemken el international transfer men 3andohom awfar?
+UPDATE: lel asaf InteractiveBrokers beyashtaret en el bank account el hat7awel men 3leeh yeb2a be esmak, fa keda bazet :/ Keda lazem ya2ema men 7esabak
+fel bank (i.e. HSBC), ya2ema men electronic bank ykoon be esmak bardo.
+
+1. Create an HSBC USA account.
+- Advantage: $0 fees since we will fund the "US" brokerage account from a "US" bank account.
+- Disadvantage: monthly maintenance fee is $50. One can avoid this fee, but has to saitisfy very difficult criteria (e.g. maintain a balance of $75,000
+each month).
+
+2. Use HSBC Egypt account.
+- Disadvantage: $25 + EGP70 fee per transfer.
+
+3. Create an HSBC UK account.
+- Disadvantage: $7 fee per transfer.
+
+4. myFin: there was a maintenance in the VISA in the application, so I couldn't try it. So, try it and know the complete fees of a transfer. Refer to
+these videos:
+https://www.youtube.com/watch?v=hicr8RcNmaA&t=7s
+https://www.youtube.com/watch?v=W13qTgECBVk
+yeb2a garab both Euro account and USD account and check which has less fees. UPDATE: el video el t7t da awel 10 mins fih bet2ol en el tare2a de
+ma3adetsh shaghala 5alas:
+https://www.youtube.com/watch?v=C2o7MeW9xIw
+
+5. P2P: haven't tried it yet so I don't know exactly the fees taken, but watch this:
+https://www.youtube.com/watch?v=RKGN9UolQhE
+Conclusion:
+i. Buy USDT on Binance using your physical bank account (whether in EGP or USD, you have both).
+ii. Sell this USDT for someone who will deposit money on your electronic bank (whatever this bank is. Maybe skrill, elevate, I still haven't read about
+them).
+iii. Send the money from your electronic bank to interactive brokers (or whatever broker).
+iv. Now to withdraw your money, send it from interactive brokers to your electronic bank.
+v. On Binance, offer to fund someone's wallet in an electronic bank for USDT.
+vi. Sell the USDT for cash in your physical bank account.
+Buy process: physical bank --> USDT --> electronic bank --> broker
+Sell process: broker --> electronic bank --> USDT --> physical bank
+Questions:
+a. Why don't we move between physical bank and broker directly? For 2 reasons:
+	= Some people say that your physical bank may not accept to send or receive money from a broker.
+	= It seems like higher fees (haven't yet known the fees in the P2P process, but it is $25/trade for HSBC international transfer).
+b. Why don't we remove Binance (i.e. USDT) from the whole process?
+	= Don't really know, but I think the problem will be in the fees from transferring from my physical bank to the electronic bank because I
+	believe this will be an international transfer.
+c. Why don't we remove the electronic bank from the whole process?
+	= Because IBKR doesn't accept cryptocurrencies transfers directly.
+
+5. Wise: HSBC beyorfod tamaman el ta3amol ma3 wise w Paypal.
+
+6. Elevate:
+
+7. Payoneer: 
+
+8. Use VPN to create an account on Wise.
+
+9. Exness: if you are to use Exness, check this:
+https://www.youtube.com/watch?v=JEmY39GFEAg
+
+10. Paxum: 
+
+11. Skrill:
+
+12. Pyypl:

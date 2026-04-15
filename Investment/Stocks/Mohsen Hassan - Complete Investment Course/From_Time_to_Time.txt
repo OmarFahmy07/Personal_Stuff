@@ -1,0 +1,92 @@
+Ba3d el course:
+
+1. 3ady 3al course men awelo le a5ro 5od keda notes bel 7agat el mohema el et2alet. For example, ETFs are better than index funds in terms of
+liquidity, mutual funds have higher fees and usually do not outperform the market, never buy junk bonds because if you want something with higher 
+return for higher risk you can simply buy shares, and so on. Fa el 7agat de kolaha lazem ta5odha te conclude it f 7ta.
+
+2. Men ta3deyty 3la el course fi el point el fatet, tele3t be kam topic keda me7tag eny ada3bes fihom aktar. Fa momken te3mel document esmo 
+"Miscellaneous Topics" masalan t7ot fih your findings in all of the following topics. In all of the following, use the APIs in this link
+https://medium.com/@MohsenHassan/best-stock-market-apis-in-2022-257a2dda4508 as well as the other websites you knew in the course to collect info:
+	a. Delwa2ty e7na ben2ol en the best way to decrease risk (i.e. average annual standard deviation of your portfolio) is to diversify among 
+	uncorrelated assets. Fa tab3an e7na 3andena 3 main assets: stocks - bonds - gold. Fa awel so2al 3ayzak tegaweb 3leeh howa: el stocks wel 
+	bonds wel gold correlated be nesbet 2ad eh? El mafrood fi a5er el course Mohsen 2aal en el stocks wel gold are perfectly uncorrelated w kan 
+	7asab fel excel sheet keda el correlation w tele3 -0.2. Tyb bel nesba lel bonds, correlated ezay ma3 el stocks? Tab wel bonds correlated ezay 
+	ma3 el gold? 7awel te search for articles on Google and videos on Youtube. Lw mesh la2y egaba fi ay 7eta, 7awel tyb tefham howa Mohsen 7asab el
+	correlation bta3 el stocks wel gold ezay w e7sebo enta b2a mabeen el stocks wel bonds w mabeen el bonds wel gold. Fi bardo 7aga fi baly keda w 
+	heya en el bonds wel gold hayeb2o correlated ma3 b3d la2en lama el interest rates betzeed, el bonds tab3an bet2el, w kaman el nas betegry t7ot 
+	flos-ha fel bonok tastafeed bel fayda, fa el dahab bey2el. Fa hal homa f3ln correlated? Kan fih el 3 articles dool eb2a e2rahom + search aktr:
+	https://www.investopedia.com/markets-press-higher-as-gold-and-bonds-show-correlation-4775626
+	https://www.ft.com/content/8be4c545-e78a-4534-a149-9031b9991e67
+	https://www.longtermtrends.net/stocks-vs-gold-comparison/
+	b. Kont shoft video Warren Buffett bey2ol fih en long-term bonds are terrible investments. W hena ana a3taked en howa bey2ol keda la2en el 
+	long-term bonds de volatile, betet7arak 7asab el interest rates foo2 w t7t, fa madam heya fiha risk, tab mat5aleek fel stock market a7san? 
+	Fa et2aked en howa asdo keda w lw keda f3ln momken tekteb fi ay 7eta masalan en el long-term bonds de we7sha f3ln, w en el wa2t el wa7eed el 
+	momken t3ooz tegebha fiha enak ka2enak bete3mel modarba; enk teshtereha wel interest rates 3alya w 7ases enaha hatenzel orayeb fa el bond s3ro
+	yezeed w tebe3o, laken mateb2ash el long-term bonds ever part of your RETIREMENT PLAN. Tyb so2al tany b2a: howa keda el short-term bonds dayman
+	helwa, sa7? Y3ny hal fi ay risk men ay noo3 ma3 el short-term bonds? shoof short-term bond ETFs w ersem el curve w shoof + etfarag 3la videos w
+	search for articles. Also, fi 7aga dayman melaghbatany fel bond ETFs de. Heya betedfa3 dividends, wala el value bta3t el ETF betzeed ma3 el
+	wa2t? 3ashan lw enta betbos 3al chart bta3 bond ETF just beyedfa3 dividend, ana shayef en da keda hayeb2a zolm lel bond, la2enak hatshofo fi
+	fatra mo3ayana masalan se3ro mazadsh fa tefteker eno mesh beyeksab, fi 7een en howa kan beyedy dividends fel fatra de fanta kasban, fa da3bes
+	keda fel 7eta de. Nafs el kalam hay apply actually to any fixed-income assets zy el REITs masalan, fa mohem tefham el no2ta de in general.
+	Nas keteer gedan fel video el t7t da bet2ol en Buffett 3ando short-term bonds bel habal la2en heya mohema for liquidity. Fa
+	howa ah beyeshtem fel long-term bonds, laken el short-term ones kwayesa la2enaha bet protect your money against inflation better than savings 
+	accounts: https://www.youtube.com/watch?v=YNvSXw_5kQE
+	Also, fi 7aga esmaha "inflation-protected bond ETFs", dawar keda ma3naha eh de. Hal heya el short-term bonds w homa rewsheen?
+	Momken b2a lw kol el kalam da bey make sense zy mana fahem keda, tekteb fi ay 7eta "you invest in stocks at young age to make a wealth, then 
+	you invest in short-term bonds when you are old to protect this wealth, you no longer need to grow your net worth more".
+	c.  El interest rates bet2asar ezay 3al different investing assets? De mohema 3ashan awalan a3mel 7esaby fel portfolio bta3y eno yeb2a 
+	diversified such that some assets perform well during low interest rates, and some other assets perform well during high interest rates. 
+	Watch this nice video: https://www.youtube.com/watch?v=aNSi5JJkVyI and search for similar ones + articles. Thaneyan 3ashan lw 3ayez a3mel ay 
+	modarbat zy eny ashtery long-term bonds wel interest rates 3alya w abe3ha lama tenzel masalan, fa lazem ab2a fahem el 7agat betet7arak ma3 el 
+	interest rates ezay.
+	d. Howa el interest rates betet7arak ma3 el phases bta3t el business cycle dayman? Y3ny masalan hal el recession beyeb2a 3la tool m3ah interest
+	rate 3aly? Ba2ol keda 3ashan lw el interest rates wel business cycle beyet7arako m3 b3d, fa 5alas enta keda mesh me7tag te3mel 7aga, you
+	already figured out el mafrood te3mel eh ma3 taghyeer el interest rates. Bs lw da dimension gedeed, yeb2a lazem te explore it bardo w tshoof 
+	how different assets behave at different phases of the business cycle.
+
+2. El comments el fel video da mohema awy: https://www.youtube.com/watch?v=iRtFDvGORQk
+Lazem tbos 3al comments la2enak lw 5adt bel video bs fa hat2ol 5alas mesh ha invest fi bonds, laken lw baseet 3al comments hatla2y nas bet2ol en 
+kalam Dave mesh 100% sa7. Fi wa7ed bey2ol en kalamo sa7 only "if you sell it", y3ny yo2sod lw mabe3nash el bond hayeb2a 3ady. Aywa 3ady el howa eh, 
+mesh hane5sar? Y3ny lw mabe3nash el bond zy ka2eny 7atet el floos fel bank w ba5od el interest rate el gedeed da, wala el bond keda aw7ash? 
+
+3. El mafrood enak foo2 katabt zy take-home notes keda fel conclusion bta3 el course .. dawar enta be nafsak bardo w etla3 be more take-home notes. 
+Zy en masalan lama yeb2a fih market crash a3mel eh? Tab lw el interest rates 3alya a3mel eh? Tab lw e7na fi recession? Tab lw da5leen 3la recession?
+Dawar b2a 3la videos w ask chatGPT w kolo.
+
+3. Bema enak delwa2ty 5alast el course w ba2eet fahem kol el investment vehicles 5alas .. ebda2 b2a dawar 3la channels w playlists kwayesa le nas bara 
+tetabe3hom dayman 3ashan yefahemok eh el beye7sal fi USA (zy the banker w el mo5ber el eqtesady w el fayda wel channels el helwa el betabe3ha hena fi 
+masr). "The Ramsey Show Highlights" wa7ed menhom. El 7agat de hatfedak 3ashan el 7agat el makanetsh wad7a awy fi el course zy currently eh a7san 
+ETFs, bonds, eh el a7san short-term wala long-term bonds, etc. Also, search for groups and pages on Facebook, Telegram, etc. le nas betetkalem 3an el 
+good investment opportunities delwa2ty.
+
+1. Fi document "How to Manage Your Money", do the following edits:
+	- fi section "Stock Market" ana kont kateb en in US invest in SPY/VOO on Vanguard/interactivebrokers. Aywa SPY wala VOO? Vanguard wala
+	interactivebrokers (UPDATE: ana fehemt. Vanguard is a fund provider, fanta hatro7lo lw enta 3ayez te invest fi mutual/index fund taba3 Vanguard.
+	Laken lw hateshtery stocks directly or ETFs, fa hayeb2a men 3la interactivebrokers. Men el a5er, interactivebrokers zy Thndr, Vanguard zy CI 
+	Capital)? Enta delwa2ty el mafrood fahem aktar te5tar anhy.
+	- Hal etkalem 3an el REITs? If not, e2ra enta 3anha w efhamha. Then, update section "Real-Estate" ta7dedan "In USA".
+	- Explore the robo advisors you mentioned in page 4 and add more information about them (read about them, watch reviews on Youtube, see which
+	is best in terms of fees, services to be provided, etc. Also, you should try out one (or more) of these robo advisors at least once, bs I
+	think it would be best to be after el geesh, fa put a reminder with this.
+	
+2. Continue this playlist: https://www.youtube.com/playlist?list=PLettntLzVfXtDDcSb5pqVfTLBp6peNKhR
+3. Watch this video: https://www.youtube.com/watch?v=X_y7j71xqAA and check the following websites:
+	https://muslimxchange.com/
+	https://fundbucks.com/
+	https://filterna.com/
+	https://www.islamicly.com/
+	https://zoya.finance/
+	https://academy.musaffa.com/
+4. 
+5. Eb2a shoof el post el shaheer da el makontesh fahmo: https://twitter.com/mAbidou/status/1736007783537861092?s=48
+6. Check this channel: https://www.youtube.com/@atradez/playlists
+
+Watch "54. Investing vs Trading" lecture again and again!
+
+- Free news providers for your watchlist/portfolio:
+1. Seeking alpha.
+2. Yahoo Finance.
+3. Investing.com.
+4. Finviz.
+5. Benzinga.
+6. MarketWatch.

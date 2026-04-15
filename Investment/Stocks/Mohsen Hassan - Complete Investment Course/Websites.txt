@@ -1,0 +1,23 @@
+Those are the websites mentioned in the course:
+
+investing.com
+tradingview.com
+finance.yahoo.com
+finviz.com
+https://www.sec.gov/edgar/searchedgar/companysearch ===> for financial statements
+dividend.com
+cefconnect.com ===> for close-end funds.
+interactivebrokers.com ===> most known brokerage firm (lowest commission).
+fidelity.com
+portfoliovisualizer.com ===> for comparing portfolios.
+etf.com
+etfdb.com
+https://www.nytimes.com/ 
+https://www.wsj.com/
+https://www.bloomberg.com/
+https://www.morningstar.com/
+https://www.buyupside.com/calculators/bondduration.htm
+https://markets.businessinsider.com/bonds
+https://portfoliocharts.com/
+https://www.lazyportfolioetf.com/
+https://mint.intuit.com/

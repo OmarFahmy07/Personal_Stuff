@@ -1,0 +1,276 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Fri Aug 12 21:16:30 2022
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+set synopsys_auto_setup true
+true
+#set_svf "/home/IC/Labs/Ass_Syn_2.0/dft/UART.svf"
+set SSLIB "/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Read reference technology libraries
+read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+## Read Reference Design Files
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/MUX_8x1.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/MUX_8x1.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/Parity_Calc.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/Parity_Calc.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/data_sampling.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/data_sampling.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/deserializer.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/deserializer.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/edge_bit_counter.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/edge_bit_counter.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/start_check.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/start_check.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/stop_check.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/stop_check.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/mux_2X1.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/mux_2X1.v'
+1
+read_verilog -container Ref "/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/UART.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/UART.v'
+1
+## set the top Reference Design 
+set_reference_design UART
+Reference design set to 'Ref:/WORK/UART'
+1
+set_top UART
+Setting top design to 'Ref:/WORK/UART'
+Status:   Elaborating design UART   ...  
+Status:   Elaborating design mux_2X1   ...  
+Status:   Elaborating design UART_Tx   ...  
+Status:   Elaborating design UART_Tx_FSM   ...  
+Status:   Elaborating design serializer   ...  
+Status:   Elaborating design Parity_Calc   ...  
+Status:   Elaborating design MUX_8x1   ...  
+Status:   Elaborating design UART_Rx   ...  
+Status:   Elaborating design UART_Rx_FSM   ...  
+Status:   Elaborating design data_sampling   ...  
+Status:   Elaborating design deserializer   ...  
+Status:   Elaborating design edge_bit_counter   ...  
+Status:   Elaborating design parity_check   ...  
+Status:   Elaborating design start_check   ...  
+Status:   Elaborating design stop_check   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/UART'
+Reference design set to 'Ref:/WORK/UART'
+1
+## Read implementation technology libraries
+read_db -container Imp [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+## Read Implementation Design Files
+read_verilog -container Imp "/home/IC/Labs/Ass_Syn_2.0/dft/UART.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/dft/UART.v'
+1
+## set the top Implementation Design
+set_implementation_design UART
+Implementation design set to 'Imp:/WORK/UART'
+1
+set_top UART
+Setting top design to 'Imp:/WORK/UART'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/UART'
+Implementation design set to 'Imp:/WORK/UART'
+1
+############################### Don't verify #################################
+# do not verify scan out port as a compare point as it is existed only after synthesis and not existed in the RTL
+#scan_out
+set_dont_verify_points -type port Ref:/WORK/*/SO
+Set don't verify point 'Ref:/WORK/UART/SO'
+1
+set_dont_verify_points -type port Imp:/WORK/*/SO
+Set don't verify point 'Imp:/WORK/UART/SO'
+1
+############################### contants #####################################
+# all atpg enable(test_mode, scan_enable) are zero during formal compare
+#test_mode
+set_constant Ref:/WORK/*/test_mode 0
+Set 'Ref:/WORK/UART/test_mode' to constant 0
+1
+set_constant Imp:/WORK/*/test_mode 0
+Set 'Imp:/WORK/UART/test_mode' to constant 0
+1
+#scan_enable
+set_constant Ref:/WORK/*/SE 0
+Set 'Ref:/WORK/UART/SE' to constant 0
+1
+set_constant Imp:/WORK/*/SE 0
+Set 'Imp:/WORK/UART/SE' to constant 0
+1
+## matching Compare points
+match
+Reference design is 'Ref:/WORK/UART'
+Implementation design is 'Imp:/WORK/UART'
+Status:  Checking designs...
+    Warning: 1 (0) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+Status:  Building verification models...
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 59 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 22 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+## verify
+set successful [verify]
+Reference design is 'Ref:/WORK/UART'
+Implementation design is 'Imp:/WORK/UART'
+    
+*********************************** Matching Results ***********************************    
+ 59 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 22 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/UART
+ Implementation design: Imp:/WORK/UART
+ 59 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      13      46       0      59
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       1       0       0       1
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+#Reports
+report_passing_points > "passing_points.rpt"
+report_failing_points > "failing_points.rpt"
+report_aborted_points > "aborted_points.rpt"
+report_unverified_points > "unverified_points.rpt"
+start_gui
+     1  source -echo -verbose fm_script.tcl
+1
+1
+fm_shell (verify)> 

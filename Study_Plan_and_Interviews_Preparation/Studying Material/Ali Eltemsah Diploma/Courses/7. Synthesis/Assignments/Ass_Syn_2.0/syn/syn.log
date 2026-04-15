@@ -1,0 +1,879 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+define_design_lib work -path ./work
+1
+set_svf UART.svf
+1
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries           #"
+#      #setting Design Libraries           #
+puts "###########################################"
+###########################################
+################## Design Compiler Library Files ######################
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/std_cells
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_2.0/std_cells
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_2.0/std_cells /home/IC/Labs/Ass_Syn_2.0/rtl
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_2.0/std_cells /home/IC/Labs/Ass_Syn_2.0/rtl /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_2.0/std_cells /home/IC/Labs/Ass_Syn_2.0/rtl /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX
+lappend search_path /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_2.0/std_cells /home/IC/Labs/Ass_Syn_2.0/rtl /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+puts "###########################################"
+###########################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+puts "###########################################"
+###########################################
+#echo "###############################################"
+#echo "############# Reading RTL Files  ##############"
+#echo "###############################################"
+#TX
+read_file -format verilog MUX_8x1.v
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/MUX_8x1.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/MUX_8x1.v
+
+Inferred memory devices in process
+	in routine MUX_8x1 line 9 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/MUX_8x1.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|    MUX_8x1/22    |   8    |    1    |      3       | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/MUX_8x1.db:MUX_8x1'
+Loaded 1 design.
+Current design is 'MUX_8x1'.
+MUX_8x1
+read_file -format verilog Parity_Calc.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/Parity_Calc.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/Parity_Calc.v
+
+Inferred memory devices in process
+	in routine Parity_Calc line 13 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/Parity_Calc.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parity_result_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/Parity_Calc.db:Parity_Calc'
+Loaded 1 design.
+Current design is 'Parity_Calc'.
+Parity_Calc
+read_file -format verilog serializer.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v
+
+Inferred memory devices in process
+	in routine serializer line 13 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      done_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine serializer line 26 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine serializer line 38 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/serializer.db:serializer'
+Loaded 1 design.
+Current design is 'serializer'.
+serializer
+read_file -format verilog UART_Tx_FSM.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v
+
+Statistics for case statements in always block at line 48 in file
+	'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_Tx_FSM line 23 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_Tx_FSM line 35 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      busy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx_FSM.db:UART_Tx_FSM'
+Loaded 1 design.
+Current design is 'UART_Tx_FSM'.
+UART_Tx_FSM
+read_file -format verilog UART_Tx.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx.v
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TX/UART_Tx.db:UART_Tx'
+Loaded 1 design.
+Current design is 'UART_Tx'.
+UART_Tx
+#RX
+read_file -format verilog data_sampling.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/data_sampling.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/data_sampling.v
+
+Inferred memory devices in process
+	in routine data_sampling line 12 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/data_sampling.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sample2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sample3_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sample1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/data_sampling.db:data_sampling'
+Loaded 1 design.
+Current design is 'data_sampling'.
+data_sampling
+read_file -format verilog deserializer.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/deserializer.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/deserializer.v
+
+Inferred memory devices in process
+	in routine deserializer line 10 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/deserializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/deserializer.db:deserializer'
+Loaded 1 design.
+Current design is 'deserializer'.
+deserializer
+read_file -format verilog edge_bit_counter.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/edge_bit_counter.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/edge_bit_counter.v
+
+Inferred memory devices in process
+	in routine edge_bit_counter line 12 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/edge_bit_counter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  edge_counter_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   bit_counter_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/edge_bit_counter.db:edge_bit_counter'
+Loaded 1 design.
+Current design is 'edge_bit_counter'.
+edge_bit_counter
+read_file -format verilog parity_check.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.v
+
+Statistics for case statements in always block at line 26 in file
+	'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine parity_check line 14 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parity_error_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/parity_check.db:parity_check'
+Loaded 1 design.
+Current design is 'parity_check'.
+parity_check
+read_file -format verilog stop_check.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/stop_check.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/stop_check.v
+
+Inferred memory devices in process
+	in routine stop_check line 9 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/stop_check.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   stop_error_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/stop_check.db:stop_check'
+Loaded 1 design.
+Current design is 'stop_check'.
+stop_check
+read_file -format verilog start_check.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/start_check.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/start_check.v
+
+Inferred memory devices in process
+	in routine start_check line 9 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/start_check.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     glitch_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/start_check.db:start_check'
+Loaded 1 design.
+Current design is 'start_check'.
+start_check
+read_file -format verilog UART_Rx.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx.v
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx.db:UART_Rx'
+Loaded 1 design.
+Current design is 'UART_Rx'.
+UART_Rx
+read_file -format verilog UART_Rx_FSM.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v
+
+Statistics for case statements in always block at line 57 in file
+	'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            61            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_Rx_FSM line 31 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine UART_Rx_FSM line 44 in file
+		'/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   data_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_RX/UART_Rx_FSM.db:UART_Rx_FSM'
+Loaded 1 design.
+Current design is 'UART_Rx_FSM'.
+UART_Rx_FSM
+#UART TOP
+read_file -format verilog UART_TOP/UART.v
+Loading verilog file '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/UART.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/UART.v
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/UART.db:UART'
+Loaded 1 design.
+Current design is 'UART'.
+UART
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+#################### Liniking All The Design Parts #########################
+#echo "###############################################"
+#echo "# Linking The Top Module with its submodules  #"
+#echo "###############################################"
+link 
+
+  Linking design 'UART'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (14 designs)              /home/IC/Labs/Ass_Syn_2.0/rtl/UART_TOP/UART.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Thu Aug 11 18:32:50 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      2
+    Unconnected ports (LINT-28)                                     1
+    Shorted outputs (LINT-31)                                       1
+
+Cells                                                              14
+    Cells do not drive (LINT-1)                                     7
+    Connected to power or ground (LINT-32)                          6
+    Nets connected to multiple pins on same cell (LINT-33)          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'serializer', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Rx_FSM', cell 'B_13' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Rx_FSM', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Rx_FSM', cell 'B_15' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Rx_FSM', cell 'B_16' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C117' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C120' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', port 'prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'UART_Tx_FSM', output port 'ser_load' is connected directly to output port 'parity_load'. (LINT-31)
+Warning: In design 'UART_Tx', a pin on submodule 'U3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data[7]' is connected to logic 1. 
+Warning: In design 'UART_Tx', a pin on submodule 'U3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data[6]' is connected to logic 1. 
+Warning: In design 'UART_Tx', a pin on submodule 'U3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data[5]' is connected to logic 1. 
+Warning: In design 'UART_Tx', a pin on submodule 'U3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data[4]' is connected to logic 1. 
+Warning: In design 'UART_Tx', a pin on submodule 'U3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data[1]' is connected to logic 0. 
+Warning: In design 'UART_Tx', a pin on submodule 'U3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data[0]' is connected to logic 1. 
+Warning: In design 'UART_Tx', the same net is connected to more than one pin on submodule 'U3'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'data[7]', 'data[6]'', 'data[5]', 'data[4]', 'data[0]'.
+1
+############# Make unique copies of replicated modules by ##################
+############# giving each replicated module a unique name  #############
+#uniquify
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+####################################################################################
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set RX_CLK_NAME 	RX_CLK
+RX_CLK
+set TX_CLK_NAME		TX_CLK
+TX_CLK
+set CLK_SETUP_SKEW	0.25
+0.25
+set CLK_HOLD_SKEW	0.05
+0.05
+set RX_CLK_PERIOD 	100
+100
+set TX_CLK_PERIOD	800
+800
+set CLK_RISE		0.1
+0.1
+set CLK_FALL		0.1
+0.1
+set CLK_LAT		0
+0
+set DIV_RATIO		8
+8
+create_clock -name $RX_CLK_NAME -period $RX_CLK_PERIOD [get_ports RX_CLK]
+1
+create_clock -name $TX_CLK_NAME -period $TX_CLK_PERIOD [get_ports TX_CLK]
+1
+#create_generated_clock -master_clock $RX_CLK_NAME -source [get_ports RX_CLK] -name $TX_CLK_NAME -divide_by $DIV_RATIO [get_ports TX_CLK]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $RX_CLK_NAME]
+1
+set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $RX_CLK_NAME]
+1
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $TX_CLK_NAME]
+1
+set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks $TX_CLK_NAME]
+1
+set_clock_transition -rise $CLK_RISE  [get_clocks $RX_CLK_NAME]
+1
+set_clock_transition -fall $CLK_FALL  [get_clocks $RX_CLK_NAME]
+1
+set_clock_transition -rise $CLK_RISE  [get_clocks $TX_CLK_NAME]
+1
+set_clock_transition -fall $CLK_FALL  [get_clocks $TX_CLK_NAME]
+1
+set_clock_latency $CLK_LAT [get_clocks $RX_CLK_NAME]
+1
+set_clock_latency $CLK_LAT [get_clocks $TX_CLK_NAME]
+1
+set_dont_touch_network TX_CLK
+1
+set_dont_touch_network RX_CLK
+1
+set_dont_touch_network RST
+1
+####################################################################################
+#########################################################
+#### Section 2 : Clocks Relationships ####
+#########################################################
+####################################################################################
+set_multicycle_path -setup $DIV_RATIO -from $TX_CLK_NAME -to $RX_CLK_NAME
+1
+set_multicycle_path -hold [expr $DIV_RATIO - 1] -from $TX_CLK_NAME -to $RX_CLK_NAME
+1
+####################################################################################
+#########################################################
+#### Section 3 : #set input/output delay on ports ####
+#########################################################
+####################################################################################
+set RX_CLK_INPUT_DELAY   [expr 0.2 * $RX_CLK_PERIOD]
+20.0
+set RX_CLK_OUTPUT_DELAY  [expr 0.2 * $RX_CLK_PERIOD]
+20.0
+#Constrain Input Paths
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports PAR_TYP]
+1
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports PAR_EN]
+1
+set_input_delay $RX_CLK_INPUT_DELAY -clock $TX_CLK_NAME [get_ports P_DATA_TX]
+1
+set_input_delay $RX_CLK_INPUT_DELAY -clock $TX_CLK_NAME [get_ports DATA_VALID_TX]
+1
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports RX_IN]
+1
+set_input_delay $RX_CLK_INPUT_DELAY -clock $RX_CLK_NAME [get_ports PRESCALE_RX]
+1
+#Constrain Output Paths
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $TX_CLK_NAME [get_ports TX_OUT]
+1
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $TX_CLK_NAME [get_ports BUSY_TX]
+1
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports P_DATA_RX]
+1
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports PAR_ERR_RX]
+1
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports STP_ERR_RX]
+1
+set_output_delay $RX_CLK_OUTPUT_DELAY -clock $RX_CLK_NAME [get_ports DATA_VALID_RX]
+1
+####################################################################################
+#########################################################
+#### Section 4 : Driving cells ####
+#########################################################
+####################################################################################
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports PAR_TYP]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports PAR_EN]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports P_DATA_TX]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports DATA_VALID_TX]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports RX_IN]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports PRESCALE_RX]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+####################################################################################
+#########################################################
+#### Section 5 : Output load ####
+#########################################################
+####################################################################################
+set_load 50 [get_ports TX_OUT]
+1
+set_load 50 [get_ports BUSY_TX]
+1
+set_load 50 [get_ports P_DATA_RX]
+1
+set_load 50 [get_ports PAR_ERR_RX]
+1
+set_load 50 [get_ports STP_ERR_RX]
+1
+set_load 50 [get_ports DATA_VALID_RX]
+1
+####################################################################################
+#########################################################
+#### Section 6 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+1
+####################################################################################
+#########################################################
+#### Section 7 : wireload Model ####
+#########################################################
+####################################################################################
+set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+1
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+###################### Mapping and optimization ########################
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 16 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'stop_check'
+  Processing 'start_check'
+  Processing 'parity_check'
+  Processing 'edge_bit_counter'
+  Processing 'deserializer'
+  Processing 'data_sampling'
+  Processing 'UART_Rx_FSM'
+  Processing 'UART_Rx'
+  Processing 'MUX_8x1'
+  Processing 'Parity_Calc'
+  Processing 'serializer'
+  Processing 'UART_Tx_FSM'
+  Processing 'UART_Tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'edge_bit_counter_DW01_cmp6_0'
+  Processing 'data_sampling_DW01_cmp6_0'
+  Processing 'data_sampling_DW01_cmp6_1'
+  Processing 'data_sampling_DW01_dec_0'
+  Processing 'data_sampling_DW01_cmp6_2'
+  Processing 'data_sampling_DW01_sub_0'
+  Processing 'UART_Rx_FSM_DW01_cmp6_0'
+  Processing 'UART_Rx_FSM_DW01_dec_0'
+  Processing 'UART_Rx_FSM_DW01_cmp6_1'
+  Processing 'UART_Rx_FSM_DW01_inc_0'
+  Processing 'UART_Rx_FSM_DW01_cmp6_2'
+  Processing 'UART_Rx_FSM_DW01_inc_1'
+  Processing 'UART_Rx_FSM_DW01_cmp6_3'
+  Processing 'edge_bit_counter_DW01_inc_0'
+  Processing 'edge_bit_counter_DW02_mult_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08  118949.9      0.00       0.0    2571.9                          
+    0:00:08  118949.9      0.00       0.0    2571.9                          
+    0:00:08  118949.9      0.00       0.0    2571.9                          
+    0:00:08  118949.9      0.00       0.0    2571.9                          
+    0:00:08  118949.9      0.00       0.0    2571.9                          
+    0:00:09  116462.4     10.64      85.4    2480.5                          
+    0:00:09  116578.9     10.23      74.1    2346.9                          
+    0:00:09  116578.9     10.23      74.1    2336.9                          
+    0:00:09  116578.9     10.23      74.1    2335.0                          
+    0:00:10  116578.9     10.23      74.1    2335.0                          
+    0:00:10  116578.9     10.23      74.1    2335.0                          
+    0:00:10  116578.9     10.23      74.1    2335.0                          
+    0:00:10  116578.9     10.23      74.1    2335.0                          
+    0:00:10  117171.9     10.23      74.1    2330.1                          
+    0:00:11  117188.3     10.23      74.1    2326.8                          
+    0:00:11  117201.3     10.23      74.1    2324.6                          
+    0:00:11  117211.9     10.23      74.1    2323.5                          
+    0:00:11  117211.9     10.23      74.1    2323.5                          
+    0:00:11  117211.9     10.23      74.1    2323.5                          
+    0:00:11  117211.9     10.23      74.1    2323.5                          
+    0:00:11  117211.9     10.23      74.1    2323.5                          
+    0:00:11  119028.4      0.00       0.0    1594.7                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11  119028.4      0.00       0.0    1594.7                          
+    0:00:11  119028.4      0.00       0.0    1594.7                          
+    0:00:11  118709.5      0.00       0.0    2263.1                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11  118709.5      0.00       0.0    2263.1                          
+    0:00:12  120248.4      0.00       0.0    1272.2 U1_UART_Rx/U3_Counter/edge_counter[3]
+    0:00:12  120589.6      0.00       0.0    1143.9 U1_UART_Rx/U2_Deserializer/shift_reg[0]
+    0:00:13  121608.4      0.00       0.0    1128.5 U1_UART_Rx/U2_Deserializer/net2190
+    0:00:14  126152.1      0.00       0.0     908.6 U1_UART_Rx/P_DATA[4]     
+    0:00:14  126121.5      0.00       0.0     902.9                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:14  126121.5      0.00       0.0     902.9                          
+    0:00:14  126121.5      0.00       0.0     902.9                          
+    0:00:15  122235.5      0.00       0.0     902.9                          
+    0:00:15  121328.5      0.00       0.0     902.9                          
+    0:00:15  121328.5      0.00       0.0     902.9                          
+    0:00:15  121328.5      0.00       0.0     902.9                          
+    0:00:15  121328.5      0.00       0.0     902.9                          
+    0:00:15  121328.5      0.00       0.0     902.9                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+    0:00:15  121069.6      0.00       0.0     909.0                          
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/Ass_Syn_2.0/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#############################################################################
+# Write out Design after initial compile
+#############################################################################
+write_file -format verilog -hierarchy -output UART.v
+Writing verilog file '/home/IC/Labs/Ass_Syn_2.0/syn/UART.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_file -format ddc 	   -hierarchy -output UART.ddc
+Writing ddc file 'UART.ddc'.
+1
+write_sdf UART.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/IC/Labs/Ass_Syn_2.0/syn/UART.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+################# reporting #######################
+report_area -hierarchy > area.rpt
+report_power -hierarchy > power.rpt
+report_timing -max_paths 100 -delay_type min > hold.rpt
+report_timing -max_paths 100 -delay_type max > setup.rpt
+report_clock -attributes > clocks.rpt
+report_port > ports.rpt
+report_constraint -all_violators > constraints.rpt
+################# starting graphical user interface #######################
+gui_start
+Current design is 'UART'.
+dc_shell> dc_shell> Current design is 'UART'.
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/generic.sdb'
+dc_shell> 

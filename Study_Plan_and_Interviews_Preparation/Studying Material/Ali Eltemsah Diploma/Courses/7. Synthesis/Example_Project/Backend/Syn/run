@@ -1,0 +1,3 @@
+rm -rf Log/* Reports/* Outputs/*
+dc_shell -f Scripts/syn.tcl | tee Log/syn.log
+rm -rf command.log filenames.log

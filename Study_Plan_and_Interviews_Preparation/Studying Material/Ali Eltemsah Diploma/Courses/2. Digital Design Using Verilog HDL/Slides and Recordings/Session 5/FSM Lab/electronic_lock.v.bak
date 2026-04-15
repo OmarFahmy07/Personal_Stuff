@@ -1,0 +1,120 @@
+module electronic_lock(
+  input wire zero,
+  input wire one,
+  input wire reset,
+  input wire clk,
+  output reg unlock
+  );
+  
+  localparam IDLE = 6'b000001,
+             S1   = 6'b000010,
+             S2   = 6'b000100,
+             S3   = 6'b001000,
+             S4   = 6'b010000,
+             S5   = 6'b100000;
+  
+  reg [5:0] current_state, next_state;
+  
+  // Sequential always block for state transition
+  always @(posedge clk or negedge reset)
+    begin
+      if (!reset)
+        begin
+          current_state <= IDLE;
+        end
+      else
+        begin
+          current_state <= next_state;
+        end
+    end
+  
+  // Combinational always block for next state logic
+  always @(*)
+    begin
+      next_state = IDLE;
+      case(current_state)
+            
+      IDLE:
+        begin
+          next_state = nextState(IDLE, S1);
+        end
+      
+      S1:
+        begin
+          next_state = nextState(S2, IDLE);
+        end
+            
+      S2:
+        begin
+          next_state = nextState(IDLE, S3);
+        end
+          
+      S3:
+        begin
+          next_state = nextState(S4, IDLE);
+        end
+            
+      S4:
+        begin
+          next_state = nextState(S5, IDLE);
+        end
+            
+      S5:
+        begin
+          next_state = nextState(IDLE, S1);
+        end
+            
+      default:
+        begin
+          next_state = IDLE;
+        end
+              
+      endcase
+    end
+    
+    // Combinational always for output logic
+    always @(*)
+      begin
+        if(current_state == S5)
+          begin
+            unlock = 1'b1;
+          end
+        else
+          begin
+            unlock = 1'b0;
+          end
+      end
+     
+    function nextState(
+      input stateIfOne,
+      input stateIfZero
+      );
+      begin 
+        case( {one, zero} )
+      
+        2'b00: // If no buttons are pressed, stay in the same state (give time to the user to press the buttons)
+          begin
+            nextState = current_state;
+          end
+        
+        2'b01: // If the zero button was pressed, go to the corresponding state
+          begin
+            nextState = stateIfZero;
+          end
+        
+        2'b10: // If the one button was pressed, go to the corresponding state
+          begin
+            nextState = stateIfOne;
+          end
+        
+        2'b11: // If both buttons were pressed, this is not allowed and hence return to the IDLE state
+          begin
+            nextState = IDLE;
+          end
+        endcase
+      end
+    endfunction
+    
+endmodule
+
+

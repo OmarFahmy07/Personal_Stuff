@@ -1,0 +1,52 @@
+Loading db file '/home/IC/Labs/Lab_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : System_Top
+Version: K-2015.06
+Date   : Fri Jul 29 18:22:18 2022
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Labs/Lab_Syn_3.0/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+System_Top             tsmc13_wl30       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+System_Top                                0.293 2.00e-02 7.85e+06    0.321 100.0
+  U0_CLK_GATE (CLK_GATE)               3.31e-03 4.65e-04 1.51e+04 3.79e-03   1.2
+  U0_ClkDiv (ClkDiv)                   2.70e-02 3.49e-03 6.56e+05 3.11e-02   9.7
+    add_61 (ClkDiv_DW01_inc_0)         1.36e-04 3.73e-05 9.30e+04 2.66e-04   0.1
+  U0_ALU (ALU)                         3.67e-03 2.23e-03 3.46e+06 9.36e-03   2.9
+    mult_48 (ALU_DW02_mult_0)          1.04e-04 2.14e-05 9.08e+05 1.03e-03   0.3
+    add_42 (ALU_DW01_add_0)            2.03e-05 7.68e-06 2.41e+05 2.69e-04   0.1
+    sub_45 (ALU_DW01_sub_0)            3.09e-05 9.42e-06 2.60e+05 3.00e-04   0.1
+    div_51 (ALU_DW_div_uns_0)          1.64e-04 2.98e-05 1.13e+06 1.33e-03   0.4
+  U0_RegFile (RegFile)                 1.13e-02 1.19e-02 3.14e+06 2.64e-02   8.2
+1

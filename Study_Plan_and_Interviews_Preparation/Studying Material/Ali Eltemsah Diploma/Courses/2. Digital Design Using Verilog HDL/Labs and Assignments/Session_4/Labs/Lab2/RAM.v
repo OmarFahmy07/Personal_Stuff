@@ -1,0 +1,26 @@
+module RAM (
+
+    input  wire                   write_enable,
+    input  wire                   clk,
+    input  wire  [2:0]            address,
+    input  wire  [15:0]           data_in,  
+    output reg   [15:0]           data_out
+
+);
+
+    // 2D Array
+    reg [15:0] memory [7:0];        //  reg [15:0] memory [7:0]; 
+
+    always @(posedge clk) 
+	  begin
+        if (write_enable) 
+		  begin
+            memory[address] <= data_in;
+		  end
+		else
+          begin
+            data_out <= memory[address]; 
+          end
+       end
+
+endmodule

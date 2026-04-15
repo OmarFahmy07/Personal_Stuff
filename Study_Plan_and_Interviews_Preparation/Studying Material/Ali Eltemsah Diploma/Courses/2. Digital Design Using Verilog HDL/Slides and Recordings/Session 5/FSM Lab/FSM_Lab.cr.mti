@@ -1,0 +1,8 @@
+{D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Slides and Recordings/Session 5/FSM Lab/electronic_lock.v} {1 {vlog -work work {D:/Ali Eltemsah - Digital IC Design/Courses/Digital Design Using Verilog HDL/Slides and Recordings/Session 5/FSM Lab/electronic_lock.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module electronic_lock
+
+Top level modules:
+	electronic_lock
+
+} {} {}}

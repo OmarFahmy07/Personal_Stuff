@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Ali Eltemsah - Digital IC Design\Courses\6. CDC and RDC\Assignments\Ass_1.1
+vbit_synchronizer
+Z1 !s100 R7`nRQBN3Hfhi=FTXo5E30
+Z2 I9a@oeOmC1EVm0EFc[`@CA3
+Z3 VI^Ce>XhgZjVW>gHcU=^oV1
+Z4 dD:\Ali Eltemsah - Digital IC Design\Courses\6. CDC and RDC\Assignments\Ass_1.1
+Z5 w1658685509
+Z6 8./bit_synchronizer.v
+Z7 F./bit_synchronizer.v
+L0 1
+Z8 OV;L;6.6d;45
+r1
+31
+o-O0
+!s85 0
+!s101 -O0
+vdata_synchronizer
+Z9 !s100 fOl8HSc9WRJA8CmaDYBS=2
+Z10 IzFVAW?Y=n0zVkSgg?;NT<2
+Z11 VEGde<j<8dUf1@DoFdKCUW1
+R4
+Z12 w1658691994
+Z13 8./data_synchronizer.v
+Z14 F./data_synchronizer.v
+L0 1
+R8
+r1
+31
+o-O0
+!s85 0
+!s101 -O0
+vdata_synchronizer_tb
+Z15 !s100 98]kU_^dVAP;fAbd]`_Mf0
+Z16 Ih[n3Hh3Qj@:5AU?13Al[72
+Z17 VlbBDMI[DDDdz`aaHGDkdJ2
+R4
+Z18 w1658695051
+Z19 8./data_synchronizer_tb.v
+Z20 F./data_synchronizer_tb.v
+L0 3
+R8
+r1
+!s85 0
+31
+!s101 -O0
+o-O0
+vpulse_generator
+Z21 !s100 9ldWYE[_jnEL^c?968?C?0
+Z22 IP:=jfniL4:6JBJE?jlBI53
+Z23 VdUjdSzC;1>F5d8dVEcW_X0
+R4
+Z24 w1658693472
+Z25 8./pulse_generator.v
+Z26 F./pulse_generator.v
+L0 1
+R8
+r1
+31
+o-O0
+!s85 0
+!s101 -O0

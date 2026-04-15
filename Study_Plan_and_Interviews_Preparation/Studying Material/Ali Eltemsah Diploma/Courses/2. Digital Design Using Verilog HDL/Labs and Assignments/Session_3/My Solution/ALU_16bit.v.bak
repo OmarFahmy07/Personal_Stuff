@@ -1,0 +1,133 @@
+module ALU_16bit(
+  input wire [15:0] A,
+  input wire [15:0] B,
+  input wire [3:0] ALU_FUN,
+  input wire CLK,
+  output reg [15:0] ALU_OUT,
+  output reg Arith_Flag,
+  output reg Logic_Flag,
+  output reg CMP_Flag,
+  output reg Shift_Flag
+  );
+  
+  wire a, b, c, d, Z, M, C, D, Y;
+
+assign  Y = a ? Z :
+        b ? M :
+        c ? C :
+        D;
+  
+  reg [15:0] ALU_OUT_COMB;
+
+  always @(posedge CLK)
+  begin
+    ALU_OUT <= ALU_OUT_COMB;
+  end
+  
+  always @(*)
+  begin
+    Arith_Flag    = 1'b0;
+    Logic_Flag    = 1'b0;
+    CMP_Flag      = 1'b0;
+    Shift_Flag    = 1'b0;
+    
+    case (ALU_FUN)
+      4'b0000: 
+        begin
+          ALU_OUT_COMB  = A + B;
+          Arith_Flag    = 1'b1;
+        end
+      
+      4'b0001: 
+        begin
+          ALU_OUT_COMB  = A - B;
+          Arith_Flag    = 1'b1;
+        end
+          
+      4'b0010: 
+        begin
+          ALU_OUT_COMB  = A * B;
+          Arith_Flag    = 1'b1;
+        end
+        
+      4'b0011: 
+        begin
+          ALU_OUT_COMB  = A / B;
+          Arith_Flag    = 1'b1;
+        end
+        
+      4'b0100: 
+        begin
+          ALU_OUT_COMB  = A & B;
+          Logic_Flag    = 1'b1;
+        end
+          
+      4'b0101: 
+        begin
+          ALU_OUT_COMB  = A | B;
+          Logic_Flag    = 1'b1;
+        end
+        
+      4'b0110: 
+        begin
+          ALU_OUT_COMB  = ~(A & B);
+          Logic_Flag    = 1'b1;
+        end
+        
+      4'b0111: 
+        begin
+          ALU_OUT_COMB  = ~(A | B);
+          Logic_Flag    = 1'b1;
+        end
+        
+      4'b1000: 
+        begin
+          ALU_OUT_COMB  = A ^ B;
+          Logic_Flag    = 1'b1;
+        end
+        
+      4'b1001: 
+        begin
+          ALU_OUT_COMB  = ~(A ^ B);
+          Logic_Flag    = 1'b1;
+        end
+        
+      4'b1010: 
+        begin
+          ALU_OUT_COMB  = (A == B);
+          CMP_Flag      = 1'b1;
+        end
+        
+      4'b1011: 
+        begin
+          ALU_OUT_COMB  = (A > B) ? 16'b10 : 16'b0;
+          CMP_Flag      = 1'b1;
+        end
+      
+      4'b1100:
+        begin
+          ALU_OUT_COMB  = (A < B) ? 16'b11 : 16'b0;
+          CMP_Flag      = 1'b1;
+        end
+      
+      4'b1101: 
+        begin
+          ALU_OUT_COMB  = A >> 1;
+          Shift_Flag    = 1'b1;
+        end
+        
+      4'b1110: 
+        begin
+          ALU_OUT_COMB  = A << 1;
+          Shift_Flag    = 1'b1;
+        end
+        
+      default: 
+        begin
+          ALU_OUT_COMB  = 16'b0;
+        end
+      
+    endcase
+  end
+  
+endmodule

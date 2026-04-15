@@ -1,0 +1,4 @@
+1- modify libraries search path 
+2- modify rtl search path
+3- modify rst in ALU.v
+4- remove unintentional latch in ALU.v 

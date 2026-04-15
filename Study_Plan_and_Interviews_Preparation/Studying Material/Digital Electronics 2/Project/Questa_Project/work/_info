@@ -1,0 +1,162 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2023.1 2023.01, Jan 23 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/EECE/4th_Year/GP/Project/Digital_Domain/Questa_Project
+T_opt
+!s110 1684274463
+V3z8db;z1H9aAkUSANkO;10
+04 6 4 work ffe_tb fast 0
+=13-e8d8d1437cac-6463fd1f-250-57bc
+R1
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.1;77
+vctrl
+2{D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v}
+!s110 1684273134
+!i10b 1
+!s100 ^3fQ9IM8k?7Q9U;;b9h<o1
+IKhYD0XfLoR>Y=Qzk;V<^C0
+Z3 dD:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/Questa_Project
+w1684273122
+8D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v
+FD:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v
+!i122 25
+L0 1 92
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.1;77
+r1
+!s85 0
+31
+!s108 1684273133.000000
+!s107 D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ctrl.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vffe
+2{D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v}
+!s110 1684273531
+!i10b 1
+!s100 L63U1fSU_5D^NFmeY^AAO3
+I_HKL:z8<K>@F?zE@zcWBm0
+R3
+w1684273526
+8D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v
+FD:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v
+!i122 26
+L0 1 118
+R4
+R5
+r1
+!s85 0
+31
+!s108 1684273531.000000
+!s107 D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe.v|
+!i113 0
+R6
+R2
+vffe_tb
+2{D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v}
+!s110 1684274460
+!i10b 1
+!s100 <DhO:PK1lmSHa4mH5>Dbl1
+I4MFmKnHNQdU=hN5Jj83D_2
+R3
+w1684274446
+8D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v
+FD:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v
+!i122 28
+L0 3 121
+R4
+R5
+r1
+!s85 0
+31
+!s108 1684274460.000000
+!s107 D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_tb.v|
+!i113 0
+R6
+R2
+vffe_top
+Z7 2{D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v}
+Z8 !s110 1684270204
+!i10b 1
+!s100 KeF^boh>cZBNWPK`d`z1J1
+Ie3nAbWzhVHgQa_[[:WgMQ1
+R3
+w1684268559
+8D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_top.v
+FD:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_top.v
+!i122 21
+L0 1 58
+R4
+R5
+r1
+!s85 0
+31
+Z9 !s108 1684270204.000000
+!s107 D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/ffe_top.v|
+!i113 0
+R6
+R2
+vpulse_gen_sync
+R7
+R8
+!i10b 1
+!s100 kU9;fPSIDezXgRca5S9`d3
+InaKd;nWVSoXG>U_iVJL[n2
+R3
+w1684268508
+8D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v
+FD:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v
+!i122 22
+L0 1 53
+R4
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/EECE/4th_Year/Semester Two/Digital Electronics 2/Project/RTL/pulse_gen_sync.v|
+!i113 0
+R6
+R2

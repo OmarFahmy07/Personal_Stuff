@@ -1,0 +1,41 @@
+Search: ctrl + f
+
+1) To open the standard cell library in the behavioral view (.v): 
+Home ==> IC ==> tsmc_fb_cl013g_sc ==> aci ==> sc-m ==> verilog ==> tsmc13_m.v(open with gedit). 
+El gate-level netlist el bene3melaha generation fel a5er beyeb2a fiha gates ketera awy, feen el reference bta3 el gates de? hena fel behavioral view 
+of the standard cell library. Examples: and2x1m, dffx1m
+
+2) To open the standard cell library in the liberty timing view (.lib): 
+Home ==> IC ==> tsmc_fb_cl013g_sc ==> aci ==> sc-m ==> synopsys ==> tsmc13_m.v(open with gedit). 
+Hatla2y el timing libraries el mo5talefa el olna 3leeha, wel .db bta3hom kolohom mawgood gahez.
+ a) ff_1p32v_0c: fast-fast / VDD= 1.32V / temperature = 0 C.
+ b) ff_1p32v_m40c: fast-fast / VDD= 1.32V / temperature = -40 C. De keda anhy library? el fast library, la2en el process fast-fast, wel VDD zayed 10%,
+    wel temperature a2al 7aga.
+ c) ff_1p32v_125c: fast-fast / VDD= 1.32V / temperature = 125 C. De to3tabar fast library. Eh da ezay? fi technologies beyeb2a fiha 7aga esmaha
+    temperature inversion. El temperature el 3alya awy wel watya awy bet3aly el mobility, w bel taly el delay bey2el in both cases.
+ d) ss_1p08v_125c: slow-slow / VDD= 1.08V / temperature = 125 C. De keda eh? el slow library.
+ e) tt_1p2v_25c: typical-typical / VDD= 1.2V / temperature = 25 C. De keda eh? el normal library.
+
+as we said, lw garabt tefta7 el .db mesh hyft7 la2eno encrypted. Thus, han open el .lib. Hatla2y fi line 33 "unit attributes", de bet3arafak el arqam
+el maktoba fel file da eh heya el units bta3et-ha. 
+T3ala ne search again 3la nafs el and gate, and2x1. Hatla2eh 2ayelak el area wel capacitance wel power wel delay w kol el ma3lomat 3an el cell de. 
+For input A w B, maktob ta7tehom el direction beta3hom wel capacitance. Eh el capacitance de? el  capacitance bta3t el pins de. Y3ny lw fih gate bet drive
+pin A de, fa el gate de hatshoof men pin A capacitance = 0.007779 pF. 
+El capacitance bta3 pin Y (i.e. output) = 0. Ezay? heya keda, homa w homa beye3melo el standard cells de bey7awlo yesagharo gedan gedan el capacitance bta3
+el output. Leeh? la2en aslan lesa el output da hay drive gate tanya fa hayshoof menha capacitance, fa lw men el awel el output beyshoof capacitance men
+nafso keda hateb2a el capacitance el howa beyshofha kebera awy. Fa fih technique beyesta5demoh fel standard cells bey5alehom ye2daro ye3mel cells el output 
+capacitance beta3-ha almost be zero. 
+Internal power = dynamic power (short-circuit power and switching power). 
+Notice en el power wel delay bta3 pin A mo5talef 3an pin B although we are indexing the same input transition and output capacitance. Tefteker leeh? la2en
+pin A & B lehom capacitances mo5talefa + routing delays mo5talefa. 3ashan keda hatla2eh 3amel tables le pin A w tables le pin B. 
+Hatla2y t7t fih max_capacitance, de el maximum capacitance el te2dar t7otaha 3al and gate de.
+leakage power: power in the different cases of the inputs, wel maktob gamb "cell_leakage_power" da el average leakage power beta3 kol el cases.
+Now search for a flip flop (DFFX1M): hatla2y nafs el 7agat 3ady, el 3ayzak ta5od bs balak meno howa el minimum pulse width. Kona olna en beyeb2a fih 
+constraints gayly men el fab 3la el minimum pulse width bta3 el clock pin bta3t el flip flop, fa hatla2y fi constraint. Hatla2eh kaman kateblak el 
+t_setup, t_hold, t_cq (el howa cell_rise w cell_fall) (you can check slide 15 in the session's slides).
+Now search for a clock-gating cell (search for gate).
+
+Tab hal manteqy eny a3od a2ra el library men el .lib beta3ha 3ashan afhamha? la2 tab3an leha manual, hatla2eh fi:
+Home ==> IC ==> tsmc_fb_cl013g_sc ==> aci ==> sc-m ==> doc
+Roo7 b2a le "DFF" hatla2y el cell "DFFX1M" el e7na shofnaha fi el .lib. Tab3an el arqam el hena heya heya el kanet fel .lib. Fa masalan lw baseet 3la
+el cell size, garab edrab el height fel width (2.87 * 8.2) hayetla3lak raqam el area el fel .lib.
